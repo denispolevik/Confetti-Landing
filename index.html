@@ -1,0 +1,1824 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Confetti</title>
+  <meta content="Confetti" property="og:title">
+  <meta content="Confetti" property="twitter:title">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <link href="css/normalize.css" rel="stylesheet" type="text/css">
+  <link href="css/main.css" rel="stylesheet" type="text/css">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+</head>
+<body class="page__body">
+  <div id="preloader" class="preloader">
+    <div class="preloader-wrapper">
+      <div class="preloader-wave-wrapper">
+        <div class="preloader-logo-wrapper"><img src="images/preloader-logo.svg" loading="lazy" alt="" class="preloader-logo">
+          <div id="loader"></div>
+        </div>
+      </div><img src="images/preloader-wave-bg.png" loading="lazy" sizes="(max-width: 800px) 100vw, 800px" srcset="images/preloader-wave-bg-p-500.png 500w, images/preloader-wave-bg.png 800w" alt="" class="preloader-wave">
+    </div>
+  </div>
+  <div class="w-embed"><input contenteditable="false" readonly="false" class="visually-hidden" name="" value="0xbb92b9d18db99c3695bc820bf2c876d4b1527fa5" id="tokenomics__copy-adress">
+    <input contenteditable="false" readonly="false" class="visually-hidden" name="" id="copy-link-value" value="cnftti.io/ref/kf0953jlkgakl82gh">
+    <style>
+.visually-hidden {
+    position: absolute;
+    overflow: hidden;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    width: 1px;
+    height: 1px;
+    clip: rect(0 0 0 0);
+}
+</style>
+  </div>
+  <div class="mobile__menu">
+    <div class="w-embed">
+      <ul>
+        <div class="li__for-menu">
+          <li>
+            <a data-en="About Us" class="scroll en" data-ru="О нас" href="#about">About Us</a>
+          </li>
+          <li>
+            <a data-en="Opportunities" data-ru="Возможности" href="#opportunities" class="en">Opportunities</a>
+          </li>
+          <li>
+            <a data-en="Tokenomics" data-ru="Токеномика" href="#tokenomics" class="en">Tokenomics</a>
+          </li>
+          <li>
+            <a data-en="Gallery" data-ru="Галлерея" href="#gallery" class="en">Gallery</a>
+          </li>
+          <li>
+            <a data-en="Community" data-ru="Сообщество" href="#community" class="en">Community</a>
+          </li>
+          <div class="btn burger-btn-menu">
+            <button data-en="Staking" data-ru="Стейкинг" class="en">Staking</button>
+          </div>
+        </div>
+      </ul>
+    </div>
+  </div>
+  <div class="site-container">
+    <div class="header--wrapp">
+      <header class="header">
+        <div class="container-cf w-container">
+          <div class="header__inner">
+            <a href="#" class="header__logo w-inline-block"><img src="images/logo.svg" loading="lazy" alt="Logo"></a>
+            <div class="header__nav-menu">
+              <nav class="nav">
+                <ul role="list" class="nav__list w-list-unstyled">
+                  <li class="nav__item">
+                    <a href="#about" class="link-2">About Us</a>
+                  </li>
+                  <li class="nav__item">
+                    <a href="#opportunities" class="link-2">Opportunities</a>
+                  </li>
+                  <li class="nav__item">
+                    <a href="#tokenomics" class="link-2">Tokenomics</a>
+                  </li>
+                  <li class="nav__item">
+                    <a href="#gallery" class="link-2">Gallery</a>
+                  </li>
+                  <li class="nav__item">
+                    <a href="#community" class="link-2">Community</a>
+                  </li>
+                </ul>
+              </nav>
+              <div class="btn">
+                <button href="#" class="button-inner button-gradient w-inline-block">
+                  <div class="text-block-25"><span class="btn-span">Staking</span></div>
+                </button>
+              </div>
+              <div class="hamburger-menu">
+                <div class="bar"></div>
+              </div>
+              <p class="target"></p>
+            </div>
+          </div>
+        </div>
+      </header>
+    </div>
+    <div class="w-embed w-script">
+      <body>
+    <script>
+function fixedHeader() {
+  if (window.pageYOffset > 10) {
+    document.querySelector(".header").classList.add("fixed");
+  } else {
+    document.querySelector(".header").classList.remove("fixed");
+  }
+}
+document.addEventListener("scroll", () => {
+  fixedHeader();
+});
+(function () {
+  const target = document.querySelector(".target");
+  const links = document.querySelectorAll(".nav a");
+  function mouseenterFunc() {
+    if (!this.parentNode.classList.contains("active")) {
+      for (let i = 0; i < links.length; i++) {
+        if (links[i].parentNode.classList.contains("active")) {
+          links[i].parentNode.classList.remove("active");
+        }
+        links[i].style.opacity = "0.25";
+      }
+      this.parentNode.classList.add("active");
+      this.style.opacity = "1";
+      const width = this.getBoundingClientRect().width;
+      const height = this.getBoundingClientRect().height;
+      const left = this.getBoundingClientRect().left + window.pageXOffset;
+      const top = this.getBoundingClientRect().top + 5;
+      const color = " #ff22b6";
+      target.style.width = `${width}px`;
+      target.style.height = `${height}px`;
+      target.style.left = `${left}px`;
+      target.style.top = `${top}px`;
+      target.style.borderColor = color;
+    }
+  }
+  for (let i = 0; i < links.length; i++) {
+    links[i].addEventListener("mouseenter", mouseenterFunc);
+  }
+  function mouseLeaveFunc() {
+    for (let i = 0; i < links.length; i++) {
+      if (links[i].parentNode.classList.contains("active")) {
+        links[i].parentNode.classList.remove("active");
+      }
+      links[i].style.opacity = "1";
+    }
+    target.style.borderColor = "transparent";
+  }
+  function resizeFunc() {
+    const active = document.querySelector(".nav li.active");
+    if (active) {
+      const left = active.getBoundingClientRect().left + window.pageXOffset;
+      const top = active.getBoundingClientRect().top + 5;
+      const width = active.getBoundingClientRect().width;
+      target.style.left = `${left}px`;
+      target.style.width = `${width}px`;
+      target.style.top = `${top}px`;
+    }
+  }
+  window.addEventListener("resize", resizeFunc);
+  document
+    .querySelector(".header__inner")
+    .addEventListener("mouseleave", () => {
+      mouseLeaveFunc();
+    });
+})();
+</script>
+      <style>
+.home-token {
+    -webkit-animation: HeroSection_pulse__PPlbN 8s ease infinite;
+    animation: HeroSection_pulse__PPlbN 8s ease infinite;
+}
+@-webkit-keyframes HeroSection_pulse__PPlbN {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05) rotate(2deg);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+@keyframes HeroSection_pulse__PPlbN {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05) rotate(2deg);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+.circle__name {
+box-shadow: 0 8px 30px rgba(255, 34, 182, 0.3);
+-webkit-box-shadow: 0 8px 30px rgba(255, 34, 182, 0.3)
+}
+@keyframes livitation {
+  0% {
+    transform: translate(0);
+  }
+  50% {
+    transform: translate(10px, 35px) rotate(30deg) scale(1.03);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+@keyframes livitation-spin {
+  0% {
+    transform: translate(0);
+  }
+  50% {
+    transform: translateY(-35px) rotate(45deg) scale(1.12);
+  }
+  75% {
+    transform: translateY(-75px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+@keyframes discoverKeyframe-1 {
+  0% {
+    animation-timing-function: ease-out;
+    transform: translate(0px, 0);
+  }
+  50% {
+    animation-timing-function: ease-in;
+    transform: translate(0px, -60px) rotate(9deg);
+  }
+  100% {
+    transform: translate(0px, 0);
+  }
+}
+@keyframes discoverKeyframe-2 {
+  0% {
+    animation-timing-function: ease-out;
+    transform: translate(0px, 0);
+  }
+  50% {
+    animation-timing-function: ease-in;
+    transform: translate(0px, -60px) rotate(15deg);
+  }
+  100% {
+    transform: translate(0px, 0);
+  }
+}
+.token__item-svg--2 {
+    -webkit-animation: livitation-spin 20s linear infinite;
+    animation: livitation-spin 20s linear infinite;
+}
+.token__item-svg--3 {
+    -webkit-animation: livitation 6s linear infinite;
+    animation: livitation 6s linear infinite;
+}
+.discover__img img {
+-webkit-animation: HeroSection_pulse__PPlbN 10s ease infinite;
+    animation: HeroSection_pulse__PPlbN 10s ease infinite;
+}
+.star__discover img {
+  -webkit-animation: discoverKeyframe-2 35s linear infinite;
+    animation: discoverKeyframe-2 35s linear infinite;
+}
+.star__discover-2 img {
+    -webkit-animation: discoverKeyframe-1 20s linear infinite;
+    animation: discoverKeyframe-1 20s linear infinite;
+}
+ .discover__info-links .discover__info-link {
+    margin-bottom: 16px;
+    position: relative;
+    background: -webkit-gradient(linear, left top, right top, from(#4200e1), to(#ff22b6));
+    background: -o-linear-gradient(left, #4200e1 0%, #ff22b6 100%);
+    background: linear-gradient(90deg, #4200e1 0%, #ff22b6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+}
+.current__info-img::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    z-index: 10;
+    height: 50%;
+    background: -o-linear-gradient(135deg, #ff658a 0%, #ffd84d 100%);
+    background: linear-gradient(315deg, #ff658a 0%, #ffd84d 100%);
+    opacity: 0.75;
+    -webkit-filter: blur(80px);
+    filter: blur(80px);
+    border-radius: 20px;
+}
+@keyframes currentViolet {
+  0% {
+    animation-timing-function: ease-out;
+    transform: translate(0px, 0);
+  }
+  50% {
+    animation-timing-function: ease-in;
+    transform: translate(0px, -30px) rotate(9deg);
+  }
+  100% {
+    transform: translate(0px, 0);
+  }
+}
+.current__star img {
+    -webkit-animation: currentViolet 8s linear infinite;
+    animation: currentViolet 8s linear infinite;
+}
+.current__star-2 img {
+    -webkit-animation: currentViolet 10s ease-in infinite;
+    animation: currentViolet 10s ease-in infinite;
+}
+.current__sphere, .road__sphere, .telegram__sphere {
+    -webkit-animation: HeroSection_pulse__PPlbN 10s ease infinite;
+    animation: HeroSection_pulse__PPlbN 10s ease infinite;
+}
+.header.fixed .target {
+  transform: translateY(32px);
+}
+.bar, .bar:after, .bar:before {
+    width: 22px;
+    height: 1px;
+    z-index: 1002;
+}
+.bar:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 5px;
+    background: rgb(255, 255, 255);
+    -webkit-transition: bottom 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), -webkit-transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+    transition: bottom 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), -webkit-transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+    -o-transition: bottom 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+    transition: bottom 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+    transition: bottom 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1), -webkit-transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+.bar:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 14px;
+    top: 5px;
+    background: rgb(255, 255, 255);
+    -webkit-transition: top 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), -webkit-transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+    transition: top 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), -webkit-transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+    -o-transition: top 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+    transition: top 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+    transition: top 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1), -webkit-transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+</style>
+    </div>
+    <div id="overlay" class="overlay"></div>
+    <div class="home">
+      <div class="stars"><img src="images/stars.svg" loading="lazy" alt="Stars bg"></div>
+      <div class="stars-mob"><img src="images/stars-mob.svg" loading="lazy" alt="Stars bg"></div>
+      <div class="background__gradient"><img src="images/gradient-1.svg" loading="lazy" alt="Background gradient"></div>
+      <div class="container-cf w-container">
+        <div class="home__inner">
+          <div class="home__inner-box">
+            <h1 class="home__title">Fireworks Of <br>Opportunities<br>In The Crypto World In One Token</h1>
+            <p class="paragraph-7 home__text">Reliable risk hedging tools</p>
+            <div class="btn home__btn">
+              <a href="#" class="home__button w-inline-block">
+                <div><span class="btn-span">Buy On Pancake</span></div>
+              </a>
+            </div>
+          </div>
+          <div class="home__inner-box--circle">
+            <div class="circle__box cicrle__box">
+              <div class="first-circle first__circle">
+                <div class="circle__name circle__name-1">
+                  <div>META</div>
+                </div>
+                <div class="circle__name circle__name-nft">
+                  <div>NFT</div>
+                </div>
+                <div class="circle__name circle__name-staking">
+                  <div>Staking</div>
+                </div>
+                <div class="circle__name circle__name-cnffti">
+                  <div>CNFFTI Token</div>
+                </div>
+                <div class="circle__name circle__name-2 circle__name-defi">
+                  <div>Defi</div>
+                </div>
+                <div class="circle__name circle__name-play-to-earn circle__name-2">
+                  <div>Play-to-earn</div>
+                </div>
+                <div class="circle__img">
+                  <div class="token__item-svg"><img src="images/token-item.png" loading="lazy" alt="Token"></div>
+                  <div class="token__item-svg--2"><img src="images/token-item-2.png" loading="lazy" alt="Token"></div>
+                  <div class="token__item-svg--3"><img src="images/token-item-3.png" loading="lazy" alt="Token"></div><img src="images/home-token.png" loading="lazy" alt="Home image"  class="home-token">
+                </div>
+                <div class="second__circle"></div>
+                <div class="third__circle"></div>
+                <div class="fourth__circle"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="about" class="discover">
+      <div class="stars"><img src="images/stars.svg" loading="lazy" alt="Stars bg"></div>
+      <div class="stars-mob"><img src="images/stars-mob.svg" loading="lazy" alt="Stars bg"></div>
+      <div class="container-cf w-container">
+        <div class="discover__inner">
+          <div class="discover__img"><img src="images/discover-img.png" loading="lazy" sizes="(max-width: 479px) 100vw, (max-width: 767px) 34vw, 38vw" srcset="images/discover-img-p-500.png 500w, images/discover-img.png 560w" alt="">
+            <div class="star__discover"><img src="images/star-discover-2.png" loading="lazy" alt="" class="image-15"></div>
+            <div class="star__discover-2"><img src="images/star-discover.png" loading="lazy" alt=""></div>
+            <div class="discover__star"><img src="images/Star.svg" loading="lazy" alt=""></div>
+          </div>
+          <div class="discover__info">
+            <h2 class="block__title discover__info-title">Discover Confetti</h2>
+            <div class="discover__info-text">
+              <p class="paragraph-8">A world where the value of a coin shapes the community. Get stable income right after IDO. Stake tokens and get up to 198% APY.</p>
+              <p class="paragraph-9">Our main goal is decentralization and anonymity of transactions. We provide affordable transactions in the BSC network, a platform with 50,000 unique active wallets daily and a total transaction volume of over $15 billion. We are developing our own P2E game in which everyone can earn tokens by playing.</p>
+            </div>
+            <div class="discover__info-links">
+              <div class="discover__info-link">
+                <a href="#" class="w-inline-block">
+                  <div><span>CoinGecko</span></div>
+                </a>
+                <div class="w-embed"><svg width="12" height="11" viewbox="0 0 12 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.761536 9.43323L8.70685 1.48792H3.74982V0.0113525H11.2381V7.49963H9.76154V2.5426L1.81622 10.4879L0.761536 9.43323Z" fill="#FF22B6"></path>
+                  </svg></div>
+              </div>
+              <div class="discover__info-link">
+                <a href="#" class="w-inline-block">
+                  <div><span>CoinMarketCap</span></div>
+                </a>
+                <div class="w-embed"><svg width="12" height="11" viewbox="0 0 12 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.761536 9.43323L8.70685 1.48792H3.74982V0.0113525H11.2381V7.49963H9.76154V2.5426L1.81622 10.4879L0.761536 9.43323Z" fill="#FF22B6"></path>
+                  </svg></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="opportunities" class="current">
+      <div class="stars"><img src="images/stars.svg" loading="lazy" alt="" class="image-16"></div>
+      <div class="stars-mob"><img src="images/stars-mob.svg" loading="lazy" alt=""></div>
+      <div class="container-cf">
+        <div class="current__inner">
+          <h2 class="block__title current__title">Current <span class="text-span-3">Events</span></h2>
+          <div class="current__wrapper">
+            <div class="current__info">
+              <div class="current__info-img"><img src="images/ido-icon.png" loading="lazy" alt="" class="image-17"></div>
+              <div class="current__info-name">
+                <h3 class="current__info-title">IDO is already running</h3>
+                <p class="current__info-text">120,000,000 coins left</p>
+              </div>
+              <a href="#" class="current__info-button w-inline-block">
+                <div class="btn"><span class="btn-span">Buy</span></div>
+              </a>
+            </div>
+            <div class="current__sphere-box">
+              <div class="current__sphere"><img src="images/current-sphere.png" loading="lazy" alt=""></div>
+              <div class="current__star"><img src="images/current-star.png" loading="lazy" alt=""></div>
+              <div class="current__star-2"><img src="images/current-star-2.png" loading="lazy" alt=""></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="soon">
+      <div class="stars"><img src="images/stars.svg" loading="lazy" alt="Stars bg"></div>
+      <div class="stars-mob"><img src="images/stars-mob.svg" loading="lazy" alt="Stars bg" class="image-12"></div>
+      <div class="soon__gradient"><img src="images/coming-soon-gradient.svg" loading="lazy" alt=""></div>
+      <div class="container-cf">
+        <div class="soon__inner">
+          <h2 class="heading-5 block__title">Coming soon</h2>
+          <div class="soon__items">
+            <div id="w-node-_9d0d1fc5-46f3-a26e-d5d0-d3d73d2a48f1-9b24b5cc" class="soon__item">
+              <div class="soon__item-img soon__item-img-1"><img src="images/soon-item-1.png" loading="lazy" id="w-node-_59d35c59-f035-8e67-2658-dd4bc308753d-9b24b5cc" alt="" class="soon__item-img"></div>
+              <h4 class="soon__item-title">P2E Gaming</h4>
+              <p class="soon__item-text">Earn and sell CNFTTI by playing P2E games. Switch between games while maintaining balance.</p>
+            </div>
+            <div id="w-node-_45c001dd-5316-ecd7-b43f-927239dfe71c-9b24b5cc" class="soon__item">
+              <div class="soon__item-img soon__item-img-2"><img src="images/soon-item-2.png" loading="lazy" id="w-node-_45c001dd-5316-ecd7-b43f-927239dfe71e-9b24b5cc" alt="" class="soon__item-img"></div>
+              <h4 class="soon__item-title">Staking up to 198% APY</h4>
+              <p class="soon__item-text">Buy tokens and hold them for a period of 30 days to get 198% and scale the blockchain network.</p>
+            </div>
+            <div id="w-node-_524b4ef1-231b-bc3c-515e-28bd8519a172-9b24b5cc" class="soon__item">
+              <div class="soon__item-img soon__item-img-3"><img src="images/soon-item-3.png" loading="lazy" id="w-node-_524b4ef1-231b-bc3c-515e-28bd8519a174-9b24b5cc" alt="" class="soon__item-img"></div>
+              <h4 class="soon__item-title">Blockchain &amp; NFT Marketplace</h4>
+              <p class="soon__item-text">Own blockchain for developing games &amp; applications and marketplace for buying and selling NFT tokens without commission.</p>
+            </div>
+            <div id="w-node-e3188722-a91b-fe07-12f4-f790b9df4c45-9b24b5cc" class="soon__item">
+              <div class="soon__item-img soon__item-img-4"><img src="images/soon-item-4.png" loading="lazy" id="w-node-e3188722-a91b-fe07-12f4-f790b9df4c47-9b24b5cc" alt="" class="soon__item-img"></div>
+              <h4 class="soon__item-title">iOS/Android App</h4>
+              <p class="soon__item-text">Farm tokens and exchange them for stablecoins without being tied to a workplace.</p>
+            </div>
+            <div id="w-node-cdf5a294-12af-fcc1-0df0-8e33ed2080bb-9b24b5cc" class="soon__item">
+              <div class="soon__item-img soon__item-img-5"><img src="images/soon-item-5.png" loading="lazy" id="w-node-cdf5a294-12af-fcc1-0df0-8e33ed2080bd-9b24b5cc" alt="" class="soon__item-img"></div>
+              <h4 class="soon__item-title">Credit Cards</h4>
+              <p class="soon__item-text">Buy CNFTTI with Visa/Mastercard credit cards.</p>
+            </div>
+            <div id="w-node-_7b615996-47d6-3b0e-fe90-bc084a5c58ad-9b24b5cc" class="soon__item">
+              <div class="soon__item-img soon__item-img-6"><img src="images/soon-item-6.png" loading="lazy" id="w-node-_7b615996-47d6-3b0e-fe90-bc084a5c58af-9b24b5cc" alt="" class="soon__item-img"></div>
+              <h4 class="soon__item-title">Cross-chain bridge</h4>
+              <p class="soon__item-text">Transfer of cryptocurrency and NFT from one blockchain to another without prior exchange for fiat currency.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="tokenomics" class="tokenomics">
+      <div class="stars"><img src="images/stars.svg" loading="lazy" alt="Stars bg"></div>
+      <div class="stars-mob"><img src="images/stars-mob.svg" loading="lazy" alt="Stars bg"></div>
+      <div class="tokemonics__bg-img"></div>
+      <div class="container-cf">
+        <div class="tokenomics__inner">
+          <div class="tokenomics__wrapper">
+            <div id="w-node-eebb2cbf-d446-7469-b14c-f6eb1f225bda-9b24b5cc" class="tokenomics__info">
+              <h2 class="block__title tokenomics__info-title">Tokenomics</h2>
+              <h3 class="tokenomics__num">1,000,000,000 <span class="text-span-4">CNFTTI</span></h3>
+              <p class="tokenomics__text">Total emission</p>
+            </div>
+            <div id="w-node-_5e54eaab-e133-b795-0b2d-568ba6957320-9b24b5cc" class="tokenomics__copy">
+              <div class="tokenomics__copy-box">
+                <div class="tokenomics__copy-title">Token tracker</div>
+                <div id="w-node-b7122460-d623-0eb5-19ed-3342bda82e4f-9b24b5cc" class="tokenomics__copy-text">CNFTTI</div>
+                <div class="tokenomics__copy-logo">
+                  <div class="w-embed"><svg width="34" height="35" viewbox="0 0 34 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M14.4219 20.0781C14.7656 20.4792 14.9375 20.9375 14.9375 21.4531C14.9375 21.9115 14.737 22.3411 14.3359 22.7422C13.9922 23.0859 13.5625 23.2578 13.0469 23.2578C12.5885 23.2578 12.1875 23.0573 11.8438 22.6562C10.0104 20.8229 9.09375 18.6745 9.09375 16.2109C9.09375 13.7474 10.0104 11.599 11.8438 9.76562L18.2891 3.23438C20.1797 1.45833 22.3281 0.570312 24.7344 0.570312C27.1979 0.570312 29.375 1.45833 31.2656 3.23438C33.0417 5.125 33.9297 7.30208 33.9297 9.76562C33.9297 12.1719 33.0417 14.3203 31.2656 16.2109L28.5156 18.9609C28.5729 17.4141 28.3438 15.9245 27.8281 14.4922L28.6875 13.6328C29.776 12.487 30.3203 11.1979 30.3203 9.76562C30.3203 8.27604 29.7474 6.98698 28.6016 5.89844C27.513 4.7526 26.224 4.17969 24.7344 4.17969C23.3021 4.17969 22.013 4.72396 20.8672 5.8125L14.4219 12.3438C13.3333 13.4323 12.7891 14.7214 12.7891 16.2109C12.7891 17.6432 13.3333 18.9323 14.4219 20.0781ZM19.5781 12.3438C19.9792 11.9427 20.4089 11.7422 20.8672 11.7422C21.3828 11.7422 21.8125 11.9427 22.1562 12.3438C23.9896 14.1771 24.9062 16.3255 24.9062 18.7891C24.9062 21.2526 23.9896 23.401 22.1562 25.2344L15.7109 31.7656C13.8203 33.5417 11.6432 34.4297 9.17969 34.4297C6.77344 34.4297 4.625 33.5417 2.73438 31.7656C0.958333 29.875 0.0703125 27.7266 0.0703125 25.3203C0.0703125 22.8568 0.958333 20.6797 2.73438 18.7891L5.48438 16.0391C5.42708 17.5859 5.65625 19.0755 6.17188 20.5078L5.3125 21.3672C4.22396 22.513 3.67969 23.8307 3.67969 25.3203C3.67969 26.7526 4.22396 28.0417 5.3125 29.1875C6.45833 30.276 7.7474 30.8203 9.17969 30.8203C10.6693 30.8203 11.987 30.276 13.1328 29.1875L19.5781 22.6562C20.6667 21.5677 21.2109 20.3073 21.2109 18.875C21.2109 17.3854 20.6667 16.0677 19.5781 14.9219C19.2344 14.5208 19.0625 14.0911 19.0625 13.6328C19.0625 13.1172 19.2344 12.6875 19.5781 12.3438Z" fill="#FF22B6"></path>
+                    </svg></div>
+                </div>
+              </div>
+              <div id="copied-box" class="tokenomics__copy-box">
+                <div class="tokenomics__copy-title">Token tracker <span class="text-span-5 copied">Copied to clipboard</span></div>
+                <div id="w-node-_7fdc4c61-c2a7-9d09-f182-fa83b0485635-9b24b5cc" class="tokenomics__copy-text">0<span>x</span>9767203e89dcD…69f1</div>
+                <div class="tokenomics__copy-logo">
+                  <div class="w-embed"><svg width="36" height="41" viewbox="0 0 36 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M31.8047 37H11.6953V11.3047H31.8047V37ZM31.8047 7.69531H11.6953C10.6641 7.69531 9.77604 8.03906 9.03125 8.72656C8.34375 9.41406 8 10.2734 8 11.3047V37C8 38.0312 8.34375 38.8906 9.03125 39.5781C9.77604 40.2656 10.6641 40.638 11.6953 40.6953H31.8047C32.8359 40.638 33.6953 40.2656 34.3828 39.5781C35.1276 38.8906 35.5 38.0312 35.5 37V11.3047C35.5 10.2734 35.1276 9.41406 34.3828 8.72656C33.6953 8.03906 32.8359 7.69531 31.8047 7.69531ZM26.3047 0.304688H4.30469C3.27344 0.361979 2.41406 0.734375 1.72656 1.42188C1.03906 2.10938 0.695312 2.96875 0.695312 4V29.6953H4.30469V4H26.3047V0.304688Z" fill="#FF22B6"></path>
+                    </svg></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tokenomics__chart">
+
+            <div class="tokenomics__chart-circle"> <svg data-aos="zoom-in" width="1331" height="1140" viewBox="0 0 1331 1140" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g opacity="0.15" filter="url(#filter0_f_606_1478)">
+              <path d="M773.878 160.202C803.948 161.147 833.823 165.399 862.963 172.881L811.981 371.44C797.412 367.7 782.474 365.574 767.439 365.101L773.878 160.202Z" fill="#C150F3" />
+              <path d="M875.386 176.28C936.684 194.088 992.976 225.963 1039.78 269.365L900.391 419.683C876.988 397.981 848.842 382.044 818.193 373.14L875.386 176.28Z" fill="#FF98F4" />
+              <path d="M1048.88 278.069C1094.33 322.889 1128.69 377.702 1149.22 438.142L955.109 504.071C944.845 473.851 927.666 446.445 904.941 424.035L1048.88 278.069Z" fill="#FF7B93" />
+              <path d="M1153.09 450.128C1182.02 544.756 1175.75 646.655 1135.44 737.024L948.219 653.512C968.374 608.327 971.508 557.378 957.042 510.064L1153.09 450.128Z" fill="#E85A50" />
+              <path
+                d="M1130.13 748.445C1093.6 824.022 1034.74 886.563 961.522 927.618C888.302 968.674 804.244 986.265 720.706 978.015L740.853 774.008C782.622 778.133 824.651 769.337 861.261 748.809C897.871 728.281 927.298 697.011 945.565 659.222L1130.13 748.445Z"
+                fill="#FFDD63" />
+              <path
+                d="M708.194 976.585C623.422 965.575 544.212 928.344 481.642 870.099C419.073 811.854 376.274 735.508 359.231 651.741L560.115 610.87C568.637 652.754 590.036 690.927 621.321 720.049C652.606 749.172 692.211 767.788 734.597 773.293L708.194 976.585Z"
+                fill="#D4FF7A" />
+              <path
+                d="M356.983 639.786C346.806 580.871 349.638 520.443 365.28 462.737C380.921 405.032 408.994 351.446 447.53 305.734C486.066 260.023 534.133 223.293 588.362 198.118C642.591 172.943 701.67 159.933 761.458 160L761.229 365C731.335 364.967 701.796 371.472 674.681 384.059C647.567 396.646 623.533 415.011 604.265 437.867C584.997 460.723 570.96 487.516 563.14 516.369C555.319 545.221 553.903 575.435 558.991 604.893L356.983 639.786Z"
+                fill="#7832E9" />
+            </g>
+            <g class="shadows" opacity="0.4">
+              <path d="M770.894 255.155C793.997 255.881 816.949 259.148 839.337 264.896L800.168 417.448C788.974 414.574 777.498 412.941 765.947 412.578L770.894 255.155Z" fill="#A532FF" />
+              <path d="M848.882 267.508C895.976 281.19 939.225 305.679 975.185 339.025L868.092 454.512C850.112 437.839 828.488 425.595 804.941 418.754L848.882 267.508Z" fill="#FF63EF" />
+              <path d="M982.178 345.712C1017.1 380.146 1043.49 422.259 1059.27 468.695L910.132 519.347C902.246 496.129 889.048 475.073 871.589 457.856L982.178 345.712Z" fill="#FF658A" />
+              <path d="M1062.24 477.903C1084.46 550.605 1079.65 628.893 1048.68 698.323L904.838 634.162C920.324 599.447 922.731 560.303 911.618 523.952L1062.24 477.903Z" fill="#FF5549" />
+              <path
+                d="M1044.6 707.098C1016.53 765.163 971.314 813.213 915.059 844.756C858.805 876.298 794.224 889.814 730.042 883.475L745.521 726.738C777.612 729.907 809.902 723.149 838.03 707.378C866.157 691.607 888.765 667.582 902.8 638.549L1044.6 707.098Z"
+                fill="#FFD84C" class="orange-bottom" />
+              <path class="greenunder"
+                d="M720.429 882.377C655.3 873.918 594.443 845.313 546.371 800.564C498.3 755.815 465.417 697.159 452.323 632.801L606.662 601.401C613.208 633.579 629.65 662.907 653.686 685.282C677.721 707.657 708.15 721.959 740.714 726.188L720.429 882.377Z"
+                fill="#D4FF7A" />
+              <path
+                d="M450.596 623.616C442.778 578.352 444.953 531.926 456.97 487.591C468.988 443.256 490.556 402.086 520.163 366.967C549.77 331.847 586.699 303.627 628.363 284.286C670.027 264.944 715.417 254.949 761.352 255L761.176 412.5C738.208 412.475 715.513 417.472 694.682 427.143C673.85 436.814 655.385 450.923 640.581 468.483C625.778 486.043 614.994 506.628 608.985 528.796C602.977 550.963 601.889 574.176 605.798 596.808L450.596 623.616Z"
+                fill="#6631FF" />
+            </g>
+            <path class="purple" d="M771.68 230.168C796.616 230.951 821.39 234.477 845.555 240.682L803.277 405.341C791.195 402.239 778.808 400.476 766.34 400.084L771.68 230.168Z" fill="#A532FF" />
+            <mask id="path-16-inside-1_606_1478" fill="white">
+              <path d="M855.857 243.5C906.689 258.268 953.37 284.701 992.184 320.693L876.592 445.347C857.185 427.35 833.844 414.134 808.428 406.75L855.857 243.5Z" />
+            </mask>
+            <path class="pink" d="M855.857 243.5C906.689 258.268 953.37 284.701 992.184 320.693L876.592 445.347C857.185 427.35 833.844 414.134 808.428 406.75L855.857 243.5Z" fill="#FF63EF" stroke="black" stroke-width="0" mask="url(#path-16-inside-1_606_1478)" />
+            <path class="peach" d="M999.732 327.911C1037.42 365.079 1065.91 410.533 1082.94 460.655L921.969 515.327C913.457 490.267 899.211 467.539 880.366 448.956L999.732 327.911Z" fill="#FF658A" />
+            <path class="orange" d="M1086.14 470.594C1110.14 549.066 1104.94 633.567 1071.51 708.507L916.254 639.254C932.969 601.784 935.568 559.533 923.572 520.297L1086.14 470.594Z" fill="#FF5549" />
+            <path class="yeallow"
+              d="M1067.11 717.979C1036.81 780.652 988.005 832.516 927.287 866.562C866.568 900.608 796.861 915.195 727.586 908.354L744.293 739.177C778.931 742.598 813.784 735.304 844.143 718.281C874.503 701.258 898.905 675.326 914.054 643.989L1067.11 717.979Z"
+              fill="#FFD84D" />
+            <path class="green"
+              d="M717.21 907.168C646.911 898.038 581.225 867.163 529.338 818.862C477.451 770.562 441.959 707.251 427.826 637.785L594.413 603.893C601.479 638.625 619.225 670.281 645.169 694.431C671.112 718.582 703.956 734.019 739.105 738.584L717.21 907.168Z"
+              fill="#D4FF7A" />
+            <path class="blue"
+              d="M425.961 627.871C417.522 579.015 419.871 528.904 432.842 481.05C445.812 433.197 469.092 388.76 501.049 350.853C533.006 312.946 572.866 282.487 617.837 261.61C662.808 240.734 711.8 229.945 761.38 230L761.19 400C736.4 399.972 711.904 405.367 689.418 415.805C666.933 426.243 647.003 441.473 631.025 460.426C615.046 479.38 603.406 501.599 596.921 525.525C590.435 549.452 589.261 574.507 593.481 598.936L425.961 627.871Z"
+              fill="#6631FF" />
+            <circle opacity="0.1" cx="761" cy="570" r="389.5" stroke="white" />
+            <circle opacity="0.4" cx="898" cy="327" r="7" fill="white" />
+            <circle opacity="0.4" cx="798.792" cy="293" r="7" fill="white" />
+            <circle opacity="0.4" cx="998" cy="423" r="7" fill="white" />
+            <circle opacity="0.4" cx="1040" cy="585.933" r="7" fill="white" />
+            <circle opacity="0.4" cx="899" cy="813.055" r="7" fill="white" />
+            <circle opacity="0.4" cx="569.721" cy="773.788" r="7" fill="white" />
+            <circle opacity="0.4" cx="552.721" cy="382.961" r="7" fill="white" />
+            <path
+              d="M895.753 325.568C894.96 326.809 895.323 328.458 896.564 329.251C897.804 330.044 899.453 329.681 900.247 328.44C901.04 327.199 900.677 325.55 899.436 324.757C898.195 323.964 896.546 324.327 895.753 325.568ZM1072.25 173.564C1071.46 174.805 1071.82 176.454 1073.06 177.247C1074.3 178.04 1075.95 177.677 1076.75 176.436C1077.54 175.195 1077.18 173.546 1075.94 172.753C1074.7 171.96 1073.05 172.323 1072.25 173.564ZM953.5 231.004L953.29 230.55L953.146 230.617L953.067 230.754L953.5 231.004ZM898.433 327.254L953.933 231.254L953.067 230.754L897.567 326.754L898.433 327.254ZM953.71 231.458L1074.71 175.454L1074.29 174.546L953.29 230.55L953.71 231.458Z"
+              fill="white" />
+            <path
+              d="M796.544 291.564C795.751 292.805 796.114 294.454 797.355 295.247C798.596 296.04 800.245 295.677 801.038 294.436C801.831 293.195 801.468 291.546 800.227 290.753C798.986 289.96 797.337 290.323 796.544 291.564ZM811.253 21.5638C810.46 22.8048 810.823 24.4537 812.064 25.2469C813.305 26.0401 814.954 25.6771 815.747 24.4362C816.54 23.1952 816.177 21.5463 814.936 20.7531C813.695 19.9599 812.046 20.3229 811.253 21.5638ZM813.5 184L813.995 184.067L814 184.034L814 184L813.5 184ZM799.287 293.067L813.995 184.067L813.004 183.933L798.296 292.933L799.287 293.067ZM814 184L814 23L813 23L813 184L814 184Z"
+              fill="white" />
+            <path
+              d="M995.752 421.565C994.959 422.806 995.322 424.455 996.563 425.248C997.804 426.041 999.453 425.678 1000.25 424.437C1001.04 423.196 1000.68 421.547 999.436 420.754C998.195 419.961 996.546 420.324 995.752 421.565ZM1166.75 357.566C1165.96 358.806 1166.32 360.455 1167.56 361.249C1168.8 362.042 1170.45 361.679 1171.25 360.438C1172.04 359.197 1171.68 357.548 1170.44 356.755C1169.2 355.962 1167.55 356.325 1166.75 357.566ZM1092 365.001L1091.96 364.503L1091.84 364.512L1091.74 364.576L1092 365.001ZM998.262 423.427L1092.26 365.427L1091.74 364.576L997.737 422.576L998.262 423.427ZM1092.04 365.5L1169.04 359.5L1168.96 358.503L1091.96 364.503L1092.04 365.5Z"
+              fill="white" />
+            <path
+              d="M1037.75 584.499C1036.96 585.74 1037.32 587.389 1038.56 588.182C1039.81 588.976 1041.45 588.613 1042.25 587.372C1043.04 586.131 1042.68 584.482 1041.44 583.689C1040.2 582.895 1038.55 583.258 1037.75 584.499ZM1166.75 591.564C1165.96 592.805 1166.32 594.454 1167.56 595.247C1168.8 596.04 1170.45 595.677 1171.25 594.436C1172.04 593.195 1171.68 591.546 1170.44 590.753C1169.2 589.96 1167.55 590.323 1166.75 591.564ZM1150 592.002L1149.97 592.501L1149.97 592.502L1150 592.002ZM1039.97 586.435L1149.97 592.501L1150.03 591.503L1040.03 585.436L1039.97 586.435ZM1149.97 592.502L1168.97 593.499L1169.03 592.501L1150.03 591.503L1149.97 592.502Z"
+              fill="white" />
+            <path
+              d="M896.908 811.583C896.115 812.824 896.478 814.473 897.719 815.266C898.96 816.059 900.609 815.696 901.402 814.455C902.195 813.214 901.832 811.565 900.591 810.772C899.35 809.979 897.701 810.342 896.908 811.583ZM950.908 970.064C950.115 971.305 950.478 972.954 951.719 973.747C952.96 974.54 954.609 974.177 955.402 972.936C956.195 971.695 955.832 970.046 954.591 969.253C953.35 968.46 951.701 968.823 950.908 970.064ZM953.155 908.964L953.655 908.964L953.655 908.833L953.591 908.719L953.155 908.964ZM898.719 813.264L952.719 909.21L953.591 908.719L899.591 812.774L898.719 813.264ZM952.655 908.964L952.655 971.5L953.655 971.5L953.655 908.964L952.655 908.964Z"
+              fill="white" />
+            <path
+              d="M567.863 772.32C567.069 773.561 567.432 775.21 568.673 776.003C569.914 776.796 571.563 776.433 572.356 775.192C573.15 773.951 572.787 772.302 571.546 771.509C570.305 770.716 568.656 771.079 567.863 772.32ZM214.987 852.568C214.194 853.809 214.557 855.458 215.798 856.251C217.039 857.044 218.688 856.681 219.481 855.44C220.274 854.2 219.911 852.551 218.67 851.757C217.429 850.964 215.78 851.327 214.987 852.568ZM495.233 854.004L495.233 854.504L495.451 854.504L495.599 854.346L495.233 854.004ZM569.744 773.415L494.868 853.663L495.599 854.346L570.475 774.097L569.744 773.415ZM495.233 853.504L217.234 853.504L217.234 854.504L495.233 854.504L495.233 853.504Z"
+              fill="white" />
+            <path
+              d="M550.812 381.492C550.019 382.733 550.382 384.382 551.623 385.175C552.864 385.968 554.513 385.605 555.306 384.364C556.099 383.123 555.736 381.474 554.495 380.681C553.254 379.888 551.605 380.251 550.812 381.492ZM0.752924 308.068C-0.0402479 309.309 0.322731 310.958 1.56366 311.751C2.80459 312.544 4.45355 312.181 5.24672 310.94C6.03989 309.699 5.67691 308.05 4.43599 307.257C3.19506 306.464 1.5461 306.827 0.752924 308.068ZM471.683 309.505L472.018 309.134L471.875 309.005L471.683 309.005L471.683 309.505ZM553.394 382.557L472.018 309.134L471.348 309.876L552.724 383.299L553.394 382.557ZM471.683 309.005L2.99982 309.004L2.99982 310.004L471.683 310.005L471.683 309.005Z"
+              fill="white" />
+            <defs>
+              <filter id="filter0_f_606_1478" x="191" y="0" width="1140" height="1140" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                <feGaussianBlur stdDeviation="80" result="effect1_foregroundBlur_606_1478" />
+              </filter>
+            </defs>
+          </svg>
+
+              <div class="tokenomics__chart-info">
+                <div class="tokenomics__chart-num">28%</div>
+                <div class="tokenomics__chart-title">Staking Rewards</div>
+                <div class="tokenomics__chart-text">1. DAILY — 0.2% / APR — 73% / APY — 107.35% Withdrawal: instantly 2. DAILY — 0.25% / APR — 91.25% / APY — 148.77% Withdrawal: 15 days 3. DAILY — 0.3% / APR — 109.5% / APY — 198.42% Withdrawal: 30 daysThe commission for withdrawing tokens from staking is 1% of the withdrawal amount. We&#x27;ll burn this 1%</div>
+              </div>
+              <div class="tokenomics__chart-info-2">
+                <div class="tokenomics__chart-num tokenomics__chart-num-2">4%</div>
+                <div class="tokenomics__chart-title">Promo</div>
+                <div class="tokenomics__chart-text">AirDrops and other events</div>
+              </div>
+              <div class="tokenomics__chart-info-3">
+                <div class="tokenomics__chart-num tokenomics__chart-num-3">8%</div>
+                <div class="tokenomics__chart-title">Promo</div>
+                <div class="tokenomics__chart-text">Unlock: 25% per month starting from 01.02.2022 / 00.00 UTC</div>
+              </div>
+              <div class="tokenomics__chart-info-4">
+                <div class="tokenomics__chart-num tokenomics__chart-num-4">8%</div>
+                <div class="tokenomics__chart-title">Promo</div>
+                <div class="tokenomics__chart-text">Marketing, advertising and other project support</div>
+              </div>
+              <div class="tokenomics__chart-info-5">
+                <div class="tokenomics__chart-num tokenomics__chart-num-5">12%</div>
+                <div class="tokenomics__chart-title">IDO</div>
+                <div class="tokenomics__chart-text">CNFFTI token presale</div>
+              </div>
+              <div class="tokenomics__chart-info-6">
+                <div class="tokenomics__chart-num tokenomics__chart-num-6">20%</div>
+                <div class="tokenomics__chart-title">Frozen</div>
+              </div>
+              <div class="tokenomics__chart-info-7">
+                <div class="tokenomics__chart-num tokenomics__chart-num-7">20%</div>
+                <div class="tokenomics__chart-title">Liquidity rewards</div>
+                <div class="tokenomics__chart-text">Liquidity Pool Supports and Pancake Liquidity Pool Contribution Rewards</div>
+              </div>
+            </div>
+          </div>
+          <div class="tokenomics__chart-mobile">
+            <div class="tokenomics__mobile-img">
+             <svg width="288" height="288" viewbox="0 0 288 288" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g opacity="0.4">
+                    <path class="purple" d="M147.653 27.7508C156.183 28.0188 164.658 29.225 172.924 31.3474L158.462 87.6742C154.329 86.613 150.092 86.01 145.827 85.8759L147.653 27.7508Z" fill="#A532FF"></path>
+                    <path d="M176.449 32.3115C193.837 37.3634 209.806 46.4055 223.084 58.7178L183.542 101.359C176.903 95.2033 168.919 90.6822 160.224 88.1563L176.449 32.3115Z" fill="#FF63EF"></path>
+                    <path d="M225.666 61.187C238.559 73.9013 248.305 89.4504 254.129 106.596L199.064 125.299C196.153 116.726 191.279 108.951 184.833 102.594L225.666 61.187Z" fill="#FF658A"></path>
+                    <path d="M255.226 109.996C263.433 136.84 261.654 165.746 250.219 191.382L197.11 167.692C202.827 154.874 203.716 140.421 199.613 126.999L255.226 109.996Z" fill="#FF5549"></path>
+                    <path d="M248.714 194.622C238.35 216.061 221.654 233.803 200.883 245.449C180.113 257.096 156.267 262.086 132.569 259.746L138.285 201.873C150.134 203.044 162.056 200.549 172.442 194.725C182.827 188.902 191.175 180.031 196.357 169.311L248.714 194.622Z" fill="#FFD84C"></path>
+                    <path d="M129.02 259.34C104.972 256.217 82.502 245.655 64.7525 229.132C47.0029 212.61 34.8617 190.952 30.0271 167.189L87.0135 155.595C89.4308 167.477 95.5014 178.305 104.376 186.567C113.251 194.828 124.486 200.109 136.51 201.671L129.02 259.34Z" fill="#D4FF7A"></path>
+                    <path d="M29.3893 163.798C26.5025 147.085 27.3058 129.943 31.7429 113.573C36.18 97.2034 44.1436 82.0022 55.0754 69.0349C66.0073 56.0676 79.6429 45.6481 95.0265 38.5066C110.41 31.3651 127.169 27.6745 144.13 27.6934L144.065 85.8473C135.585 85.8378 127.205 87.6831 119.513 91.2538C111.821 94.8246 105.004 100.034 99.5377 106.518C94.0717 113.002 90.09 120.602 87.8714 128.787C85.6528 136.972 85.2512 145.543 86.6946 153.899L29.3893 163.798Z" fill="#6631FF"></path>
+                  </g>
+                  <path class="purple" d="M147.943 18.5248C157.151 18.8142 166.298 20.116 175.22 22.4069L159.61 83.2041C155.149 82.0587 150.575 81.4078 145.972 81.2631L147.943 18.5248Z" fill="#A532FF"></path>
+                  <mask id="path-9-inside-1_705_5960" fill="white">
+                    <path d="M179.024 23.4476C197.793 28.9004 215.029 38.6601 229.36 51.9496L186.68 97.9755C179.515 91.3307 170.897 86.4509 161.512 83.7245L179.024 23.4476Z"></path>
+                  </mask>
+                  <path d="M179.024 23.4476C197.793 28.9004 215.029 38.6601 229.36 51.9496L186.68 97.9755C179.515 91.3307 170.897 86.4509 161.512 83.7245L179.024 23.4476Z" fill="#FF63EF" stroke="black" stroke-width="0" mask="url(#path-9-inside-1_705_5960)"></path>
+                  <path d="M232.147 54.6147C246.064 68.3381 256.584 85.1213 262.869 103.628L203.435 123.815C200.292 114.561 195.032 106.17 188.074 99.3081L232.147 54.6147Z" fill="#FF658A"></path>
+                  <path d="M264.053 107.298C272.912 136.272 270.992 167.472 258.65 195.143L201.325 169.572C207.496 155.737 208.456 140.137 204.027 125.649L264.053 107.298Z" fill="#FF5549"></path>
+                  <path d="M257.025 198.64C245.838 221.781 227.818 240.93 205.398 253.501C182.979 266.072 157.241 271.458 131.663 268.932L137.831 206.467C150.621 207.73 163.49 205.037 174.699 198.751C185.909 192.466 194.919 182.891 200.512 171.32L257.025 198.64Z" fill="#FFD84D"></path>
+                  <path d="M127.831 268.494C101.875 265.123 77.6215 253.723 58.4633 235.889C39.305 218.055 26.2002 194.679 20.9819 169.03L82.491 156.516C85.1002 169.34 91.6526 181.028 101.232 189.945C110.811 198.862 122.938 204.562 135.916 206.248L127.831 268.494Z" fill="#D4FF7A"></path>
+                  <path d="M20.2935 165.369C17.1776 147.33 18.0447 128.827 22.8339 111.158C27.6232 93.4896 36.2188 77.0819 48.0182 63.0855C59.8177 49.089 74.5355 37.8426 91.14 30.1343C107.744 22.426 125.834 18.4425 144.14 18.463L144.07 81.2322C134.917 81.2219 125.872 83.2137 117.57 87.0678C109.268 90.922 101.909 96.5452 96.0092 103.543C90.1095 110.542 85.8117 118.745 83.417 127.58C81.0224 136.414 80.5889 145.666 82.1468 154.685L20.2935 165.369Z" fill="#6631FF"></path>
+                  <circle opacity="0.1" cx="144" cy="144" r="143.5" stroke="white"></circle>
+                </svg>
+            </div>
+            <div class="tokenomics__chart-info-mob">
+              <div class="tokenomics__chart-num">28%</div>
+              <div class="tokenomics__chart-title">Staking Rewards</div>
+              <div class="tokenomics__chart-text">1. DAILY — 0.2% / APR — 73% / APY — 107.35% Withdrawal: instantly2. DAILY — 0.25% / APR — 91.25% / APY — 148.77% Withdrawal: 15 days3. DAILY — 0.3% / APR — 109.5% / APY — 198.42% Withdrawal: 30 daysThe commission for withdrawing tokens from staking is 1% of the withdrawal amount. We&#x27;ll burn this 1%</div>
+            </div>
+            <div class="tokenomics__chart-wrapper--mob">
+              <div class="tokenomics__chart-info-mob">
+                <div class="tokenomics__chart-num tokenomics__chart-num-2">4%</div>
+                <div class="tokenomics__chart-title">Promo</div>
+                <div class="tokenomics__chart-text">AirDrops and other events</div>
+              </div>
+              <div class="tokenomics__chart-info-mob">
+                <div class="tokenomics__chart-num tokenomics__chart-num-5">12%</div>
+                <div class="tokenomics__chart-title">IDO</div>
+                <div class="tokenomics__chart-text">CNFFTI token presale</div>
+              </div>
+              <div class="tokenomics__chart-info-mob">
+                <div class="tokenomics__chart-num tokenomics__chart-num-3">8%</div>
+                <div class="tokenomics__chart-title">DevTeam</div>
+                <div class="tokenomics__chart-text">Unlock: 25% per month starting from 01.02.2022 / 00.00 UTC</div>
+              </div>
+              <div class="tokenomics__chart-info-mob">
+                <div class="tokenomics__chart-num tokenomics__chart-num-6">20%</div>
+                <div class="tokenomics__chart-title">Promo</div>
+                <div class="tokenomics__chart-text">Frozen</div>
+              </div>
+              <div class="tokenomics__chart-info-mob">
+                <div class="tokenomics__chart-num tokenomics__chart-num-4">8%</div>
+                <div class="tokenomics__chart-title">Marketing</div>
+                <div class="tokenomics__chart-text">Marketing, advertising and other project support</div>
+              </div>
+              <div class="tokenomics__chart-info-mob">
+                <div class="tokenomics__chart-num tokenomics__chart-num-7">20%</div>
+                <div class="tokenomics__chart-title">Liquidity rewards</div>
+                <div class="tokenomics__chart-text">Liquidity Pool Supports and Pancake Liquidity Pool Contribution Rewards</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="gallery" class="gallery">
+      <div class="stars"><img src="images/stars.svg" loading="lazy" alt="Stars bg"></div>
+      <div class="stars-mob"><img src="images/stars-mob.svg" loading="lazy" alt="Stars bg"></div>
+      <div class="gallery__gradien"><img src="images/gallery-gradient.svg" loading="lazy" alt=""></div>
+      <div class="container-cf">
+        <div class="gallery__inner">
+          <div class="bottom__blur"></div>
+          <h2 class="block__title"><span class="text-span-6">NFT </span>Gallery</h2>
+          <div class="gallery__wrapper">
+            <div id="w-node-_49f07af3-c923-f515-c06e-0bb35f616a1e-9b24b5cc" class="gallery__item">
+              <div class="gallery__item-img"><img src="images/gallery-item-1.png" loading="lazy" alt=""></div>
+              <div class="gallery__item-info">
+                <div id="w-node-_05285e5b-5807-d3e9-bade-ef4503a90f76-9b24b5cc" class="gallery__info-name">
+                  <div class="gallery__info-title--box">
+                    <div class="gallery__info-title">By Confetti</div>
+                    <div class="gallery__info-confirmed">
+                      <div class="w-embed"><svg width="18" height="18" viewbox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M8.08184 2.48588C8.39685 1.63299 9.60315 1.63299 9.91816 2.48588C10.1522 3.11948 10.9424 3.33123 11.4619 2.89952C12.1612 2.31841 13.2058 2.92156 13.0522 3.81769C12.9381 4.48341 13.5166 5.06192 14.1823 4.94779C15.0784 4.79416 15.6816 5.83884 15.1005 6.53809C14.6688 7.05756 14.8805 7.84782 15.5141 8.08184C16.367 8.39685 16.367 9.60315 15.5141 9.91816C14.8805 10.1522 14.6688 10.9424 15.1005 11.4619C15.6816 12.1612 15.0784 13.2058 14.1823 13.0522C13.5166 12.9381 12.9381 13.5166 13.0522 14.1823C13.2058 15.0784 12.1612 15.6816 11.4619 15.1005C10.9424 14.6688 10.1522 14.8805 9.91816 15.5141C9.60315 16.367 8.39685 16.367 8.08184 15.5141C7.84782 14.8805 7.05756 14.6688 6.53809 15.1005C5.83884 15.6816 4.79416 15.0784 4.94779 14.1823C5.06192 13.5166 4.48341 12.9381 3.81769 13.0522C2.92156 13.2058 2.31841 12.1612 2.89952 11.4619C3.33123 10.9424 3.11948 10.1522 2.48588 9.91816C1.63299 9.60315 1.63299 8.39685 2.48588 8.08184C3.11948 7.84782 3.33123 7.05756 2.89952 6.53809C2.31841 5.83884 2.92156 4.79416 3.81769 4.94779C4.48341 5.06192 5.06192 4.48341 4.94779 3.81769C4.79416 2.92156 5.83884 2.31841 6.53809 2.89952C7.05756 3.33123 7.84782 3.11948 8.08184 2.48588Z" fill="#3598F2"></path>
+                          <path d="M6 8.47826L8.32 11L12 7" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg></div>
+                    </div>
+                  </div>
+                  <div id="w-node-_934f2e30-9ad3-e2fd-e533-3c7a87b4b3ce-9b24b5cc" class="gallery__info-text">Star</div>
+                </div>
+                <div id="w-node-_71640c26-fb90-ffd3-8ccf-0db750dbb31b-9b24b5cc" class="gallery__info-price">
+                  <div class="gallery__info-title--box">
+                    <div class="gallery__info-title">Price</div>
+                  </div>
+                  <div id="w-node-a7a848d6-b21b-6e68-a4b7-56108ed8fb5f-9b24b5cc" class="gallery__info-text--box">
+                    <div class="gallery__info-text--img">
+                      <div class="w-embed"><svg width="25" height="24" viewbox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <rect x="0.5" width="24" height="24" rx="12" fill="white"></rect>
+                          <g clip-path="url(#clip0_606_1259)">
+                            <path opacity="0.75" d="M12.4986 4V15.0512L17.4093 12.1484L12.4986 4Z" fill="black"></path>
+                            <path opacity="0.4" d="M12.4986 4L7.58768 12.1484L12.4986 15.0512V9.91619V4Z" fill="black"></path>
+                            <path opacity="0.75" d="M12.4986 15.9809V19.9998L17.4123 13.0796L12.4986 15.9809Z" fill="black"></path>
+                            <path opacity="0.4" d="M12.4986 19.9998V15.9809L7.58768 13.0796L12.4986 19.9998Z" fill="black"></path>
+                            <path opacity="0.6" d="M12.4986 15.051L17.4093 12.1482L12.4986 9.91602V15.051Z" fill="black"></path>
+                            <path opacity="0.5" d="M7.58768 12.1482L12.4986 15.051V9.91602L7.58768 12.1482Z" fill="black"></path>
+                          </g>
+                          <defs>
+                            <clippath id="clip0_606_1259">
+                              <rect width="16" height="16" fill="white" transform="translate(4.5 4)"></rect>
+                            </clippath>
+                          </defs>
+                        </svg></div>
+                    </div>
+                    <div class="gallery__info-text">0.031</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="w-node-_8f38f9d2-8491-35f1-81e2-4e0c32caa1aa-9b24b5cc" class="gallery__item">
+              <div class="gallery__item-img"><img src="images/gallery-item-2.png" loading="lazy" alt=""></div>
+              <div class="gallery__item-info">
+                <div id="w-node-_8f38f9d2-8491-35f1-81e2-4e0c32caa1ae-9b24b5cc" class="gallery__info-name">
+                  <div class="gallery__info-title--box">
+                    <div class="gallery__info-title">By Confetti</div>
+                    <div class="gallery__info-confirmed">
+                      <div class="w-embed"><svg width="18" height="18" viewbox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M8.08184 2.48588C8.39685 1.63299 9.60315 1.63299 9.91816 2.48588C10.1522 3.11948 10.9424 3.33123 11.4619 2.89952C12.1612 2.31841 13.2058 2.92156 13.0522 3.81769C12.9381 4.48341 13.5166 5.06192 14.1823 4.94779C15.0784 4.79416 15.6816 5.83884 15.1005 6.53809C14.6688 7.05756 14.8805 7.84782 15.5141 8.08184C16.367 8.39685 16.367 9.60315 15.5141 9.91816C14.8805 10.1522 14.6688 10.9424 15.1005 11.4619C15.6816 12.1612 15.0784 13.2058 14.1823 13.0522C13.5166 12.9381 12.9381 13.5166 13.0522 14.1823C13.2058 15.0784 12.1612 15.6816 11.4619 15.1005C10.9424 14.6688 10.1522 14.8805 9.91816 15.5141C9.60315 16.367 8.39685 16.367 8.08184 15.5141C7.84782 14.8805 7.05756 14.6688 6.53809 15.1005C5.83884 15.6816 4.79416 15.0784 4.94779 14.1823C5.06192 13.5166 4.48341 12.9381 3.81769 13.0522C2.92156 13.2058 2.31841 12.1612 2.89952 11.4619C3.33123 10.9424 3.11948 10.1522 2.48588 9.91816C1.63299 9.60315 1.63299 8.39685 2.48588 8.08184C3.11948 7.84782 3.33123 7.05756 2.89952 6.53809C2.31841 5.83884 2.92156 4.79416 3.81769 4.94779C4.48341 5.06192 5.06192 4.48341 4.94779 3.81769C4.79416 2.92156 5.83884 2.31841 6.53809 2.89952C7.05756 3.33123 7.84782 3.11948 8.08184 2.48588Z" fill="#3598F2"></path>
+                          <path d="M6 8.47826L8.32 11L12 7" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg></div>
+                    </div>
+                  </div>
+                  <div id="w-node-_8f38f9d2-8491-35f1-81e2-4e0c32caa1b4-9b24b5cc" class="gallery__info-text">Heart</div>
+                </div>
+                <div id="w-node-_8f38f9d2-8491-35f1-81e2-4e0c32caa1b6-9b24b5cc" class="gallery__info-price">
+                  <div class="gallery__info-title--box">
+                    <div class="gallery__info-title">Price</div>
+                  </div>
+                  <div id="w-node-_8f38f9d2-8491-35f1-81e2-4e0c32caa1ba-9b24b5cc" class="gallery__info-text--box">
+                    <div class="gallery__info-text--img">
+                      <div class="w-embed"><svg width="25" height="24" viewbox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <rect x="0.5" width="24" height="24" rx="12" fill="white"></rect>
+                          <g clip-path="url(#clip0_606_1259)">
+                            <path opacity="0.75" d="M12.4986 4V15.0512L17.4093 12.1484L12.4986 4Z" fill="black"></path>
+                            <path opacity="0.4" d="M12.4986 4L7.58768 12.1484L12.4986 15.0512V9.91619V4Z" fill="black"></path>
+                            <path opacity="0.75" d="M12.4986 15.9809V19.9998L17.4123 13.0796L12.4986 15.9809Z" fill="black"></path>
+                            <path opacity="0.4" d="M12.4986 19.9998V15.9809L7.58768 13.0796L12.4986 19.9998Z" fill="black"></path>
+                            <path opacity="0.6" d="M12.4986 15.051L17.4093 12.1482L12.4986 9.91602V15.051Z" fill="black"></path>
+                            <path opacity="0.5" d="M7.58768 12.1482L12.4986 15.051V9.91602L7.58768 12.1482Z" fill="black"></path>
+                          </g>
+                          <defs>
+                            <clippath id="clip0_606_1259">
+                              <rect width="16" height="16" fill="white" transform="translate(4.5 4)"></rect>
+                            </clippath>
+                          </defs>
+                        </svg></div>
+                    </div>
+                    <div class="gallery__info-text">0.031</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="w-node-ee4a4e5d-88a4-2c8d-f99f-344a5ff722bd-9b24b5cc" class="gallery__item">
+              <div class="gallery__item-img"><img src="images/gallery-item-3.png" loading="lazy" alt=""></div>
+              <div class="gallery__item-info">
+                <div id="w-node-ee4a4e5d-88a4-2c8d-f99f-344a5ff722c1-9b24b5cc" class="gallery__info-name">
+                  <div class="gallery__info-title--box">
+                    <div class="gallery__info-title">By Confetti</div>
+                    <div class="gallery__info-confirmed">
+                      <div class="w-embed"><svg width="18" height="18" viewbox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M8.08184 2.48588C8.39685 1.63299 9.60315 1.63299 9.91816 2.48588C10.1522 3.11948 10.9424 3.33123 11.4619 2.89952C12.1612 2.31841 13.2058 2.92156 13.0522 3.81769C12.9381 4.48341 13.5166 5.06192 14.1823 4.94779C15.0784 4.79416 15.6816 5.83884 15.1005 6.53809C14.6688 7.05756 14.8805 7.84782 15.5141 8.08184C16.367 8.39685 16.367 9.60315 15.5141 9.91816C14.8805 10.1522 14.6688 10.9424 15.1005 11.4619C15.6816 12.1612 15.0784 13.2058 14.1823 13.0522C13.5166 12.9381 12.9381 13.5166 13.0522 14.1823C13.2058 15.0784 12.1612 15.6816 11.4619 15.1005C10.9424 14.6688 10.1522 14.8805 9.91816 15.5141C9.60315 16.367 8.39685 16.367 8.08184 15.5141C7.84782 14.8805 7.05756 14.6688 6.53809 15.1005C5.83884 15.6816 4.79416 15.0784 4.94779 14.1823C5.06192 13.5166 4.48341 12.9381 3.81769 13.0522C2.92156 13.2058 2.31841 12.1612 2.89952 11.4619C3.33123 10.9424 3.11948 10.1522 2.48588 9.91816C1.63299 9.60315 1.63299 8.39685 2.48588 8.08184C3.11948 7.84782 3.33123 7.05756 2.89952 6.53809C2.31841 5.83884 2.92156 4.79416 3.81769 4.94779C4.48341 5.06192 5.06192 4.48341 4.94779 3.81769C4.79416 2.92156 5.83884 2.31841 6.53809 2.89952C7.05756 3.33123 7.84782 3.11948 8.08184 2.48588Z" fill="#3598F2"></path>
+                          <path d="M6 8.47826L8.32 11L12 7" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg></div>
+                    </div>
+                  </div>
+                  <div id="w-node-ee4a4e5d-88a4-2c8d-f99f-344a5ff722c7-9b24b5cc" class="gallery__info-text">Spring</div>
+                </div>
+                <div id="w-node-ee4a4e5d-88a4-2c8d-f99f-344a5ff722c9-9b24b5cc" class="gallery__info-price">
+                  <div class="gallery__info-title--box">
+                    <div class="gallery__info-title">Price</div>
+                  </div>
+                  <div id="w-node-ee4a4e5d-88a4-2c8d-f99f-344a5ff722cd-9b24b5cc" class="gallery__info-text--box">
+                    <div class="gallery__info-text--img">
+                      <div class="w-embed"><svg width="25" height="24" viewbox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <rect x="0.5" width="24" height="24" rx="12" fill="white"></rect>
+                          <g clip-path="url(#clip0_606_1259)">
+                            <path opacity="0.75" d="M12.4986 4V15.0512L17.4093 12.1484L12.4986 4Z" fill="black"></path>
+                            <path opacity="0.4" d="M12.4986 4L7.58768 12.1484L12.4986 15.0512V9.91619V4Z" fill="black"></path>
+                            <path opacity="0.75" d="M12.4986 15.9809V19.9998L17.4123 13.0796L12.4986 15.9809Z" fill="black"></path>
+                            <path opacity="0.4" d="M12.4986 19.9998V15.9809L7.58768 13.0796L12.4986 19.9998Z" fill="black"></path>
+                            <path opacity="0.6" d="M12.4986 15.051L17.4093 12.1482L12.4986 9.91602V15.051Z" fill="black"></path>
+                            <path opacity="0.5" d="M7.58768 12.1482L12.4986 15.051V9.91602L7.58768 12.1482Z" fill="black"></path>
+                          </g>
+                          <defs>
+                            <clippath id="clip0_606_1259">
+                              <rect width="16" height="16" fill="white" transform="translate(4.5 4)"></rect>
+                            </clippath>
+                          </defs>
+                        </svg></div>
+                    </div>
+                    <div class="gallery__info-text">0.031</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="w-node-d478689e-8cc8-345b-9990-60be819f2509-9b24b5cc" class="gallery__item">
+              <div class="gallery__item-img"><img src="images/gallery-item-4.png" loading="lazy" alt=""></div>
+              <div class="gallery__item-info">
+                <div id="w-node-d478689e-8cc8-345b-9990-60be819f250d-9b24b5cc" class="gallery__info-name">
+                  <div class="gallery__info-title--box">
+                    <div class="gallery__info-title">By Confetti</div>
+                    <div class="gallery__info-confirmed">
+                      <div class="w-embed"><svg width="18" height="18" viewbox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M8.08184 2.48588C8.39685 1.63299 9.60315 1.63299 9.91816 2.48588C10.1522 3.11948 10.9424 3.33123 11.4619 2.89952C12.1612 2.31841 13.2058 2.92156 13.0522 3.81769C12.9381 4.48341 13.5166 5.06192 14.1823 4.94779C15.0784 4.79416 15.6816 5.83884 15.1005 6.53809C14.6688 7.05756 14.8805 7.84782 15.5141 8.08184C16.367 8.39685 16.367 9.60315 15.5141 9.91816C14.8805 10.1522 14.6688 10.9424 15.1005 11.4619C15.6816 12.1612 15.0784 13.2058 14.1823 13.0522C13.5166 12.9381 12.9381 13.5166 13.0522 14.1823C13.2058 15.0784 12.1612 15.6816 11.4619 15.1005C10.9424 14.6688 10.1522 14.8805 9.91816 15.5141C9.60315 16.367 8.39685 16.367 8.08184 15.5141C7.84782 14.8805 7.05756 14.6688 6.53809 15.1005C5.83884 15.6816 4.79416 15.0784 4.94779 14.1823C5.06192 13.5166 4.48341 12.9381 3.81769 13.0522C2.92156 13.2058 2.31841 12.1612 2.89952 11.4619C3.33123 10.9424 3.11948 10.1522 2.48588 9.91816C1.63299 9.60315 1.63299 8.39685 2.48588 8.08184C3.11948 7.84782 3.33123 7.05756 2.89952 6.53809C2.31841 5.83884 2.92156 4.79416 3.81769 4.94779C4.48341 5.06192 5.06192 4.48341 4.94779 3.81769C4.79416 2.92156 5.83884 2.31841 6.53809 2.89952C7.05756 3.33123 7.84782 3.11948 8.08184 2.48588Z" fill="#3598F2"></path>
+                          <path d="M6 8.47826L8.32 11L12 7" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg></div>
+                    </div>
+                  </div>
+                  <div id="w-node-d478689e-8cc8-345b-9990-60be819f2513-9b24b5cc" class="gallery__info-text">Paillett5</div>
+                </div>
+                <div id="w-node-d478689e-8cc8-345b-9990-60be819f2515-9b24b5cc" class="gallery__info-price">
+                  <div class="gallery__info-title--box">
+                    <div class="gallery__info-title">Price</div>
+                  </div>
+                  <div id="w-node-d478689e-8cc8-345b-9990-60be819f2519-9b24b5cc" class="gallery__info-text--box">
+                    <div class="gallery__info-text--img">
+                      <div class="w-embed"><svg width="25" height="24" viewbox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <rect x="0.5" width="24" height="24" rx="12" fill="white"></rect>
+                          <g clip-path="url(#clip0_606_1259)">
+                            <path opacity="0.75" d="M12.4986 4V15.0512L17.4093 12.1484L12.4986 4Z" fill="black"></path>
+                            <path opacity="0.4" d="M12.4986 4L7.58768 12.1484L12.4986 15.0512V9.91619V4Z" fill="black"></path>
+                            <path opacity="0.75" d="M12.4986 15.9809V19.9998L17.4123 13.0796L12.4986 15.9809Z" fill="black"></path>
+                            <path opacity="0.4" d="M12.4986 19.9998V15.9809L7.58768 13.0796L12.4986 19.9998Z" fill="black"></path>
+                            <path opacity="0.6" d="M12.4986 15.051L17.4093 12.1482L12.4986 9.91602V15.051Z" fill="black"></path>
+                            <path opacity="0.5" d="M7.58768 12.1482L12.4986 15.051V9.91602L7.58768 12.1482Z" fill="black"></path>
+                          </g>
+                          <defs>
+                            <clippath id="clip0_606_1259">
+                              <rect width="16" height="16" fill="white" transform="translate(4.5 4)"></rect>
+                            </clippath>
+                          </defs>
+                        </svg></div>
+                    </div>
+                    <div class="gallery__info-text">0.031</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="w-node-e6dc59c8-e626-f59b-ab47-78484c2d38a3-9b24b5cc" class="gallery__item">
+              <div class="gallery__item-img"><img src="images/gallery-item-5.png" loading="lazy" alt=""></div>
+              <div class="gallery__item-info">
+                <div id="w-node-e6dc59c8-e626-f59b-ab47-78484c2d38a7-9b24b5cc" class="gallery__info-name">
+                  <div class="gallery__info-title--box">
+                    <div class="gallery__info-title">By Confetti</div>
+                    <div class="gallery__info-confirmed">
+                      <div class="w-embed"><svg width="18" height="18" viewbox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M8.08184 2.48588C8.39685 1.63299 9.60315 1.63299 9.91816 2.48588C10.1522 3.11948 10.9424 3.33123 11.4619 2.89952C12.1612 2.31841 13.2058 2.92156 13.0522 3.81769C12.9381 4.48341 13.5166 5.06192 14.1823 4.94779C15.0784 4.79416 15.6816 5.83884 15.1005 6.53809C14.6688 7.05756 14.8805 7.84782 15.5141 8.08184C16.367 8.39685 16.367 9.60315 15.5141 9.91816C14.8805 10.1522 14.6688 10.9424 15.1005 11.4619C15.6816 12.1612 15.0784 13.2058 14.1823 13.0522C13.5166 12.9381 12.9381 13.5166 13.0522 14.1823C13.2058 15.0784 12.1612 15.6816 11.4619 15.1005C10.9424 14.6688 10.1522 14.8805 9.91816 15.5141C9.60315 16.367 8.39685 16.367 8.08184 15.5141C7.84782 14.8805 7.05756 14.6688 6.53809 15.1005C5.83884 15.6816 4.79416 15.0784 4.94779 14.1823C5.06192 13.5166 4.48341 12.9381 3.81769 13.0522C2.92156 13.2058 2.31841 12.1612 2.89952 11.4619C3.33123 10.9424 3.11948 10.1522 2.48588 9.91816C1.63299 9.60315 1.63299 8.39685 2.48588 8.08184C3.11948 7.84782 3.33123 7.05756 2.89952 6.53809C2.31841 5.83884 2.92156 4.79416 3.81769 4.94779C4.48341 5.06192 5.06192 4.48341 4.94779 3.81769C4.79416 2.92156 5.83884 2.31841 6.53809 2.89952C7.05756 3.33123 7.84782 3.11948 8.08184 2.48588Z" fill="#3598F2"></path>
+                          <path d="M6 8.47826L8.32 11L12 7" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg></div>
+                    </div>
+                  </div>
+                  <div id="w-node-e6dc59c8-e626-f59b-ab47-78484c2d38ad-9b24b5cc" class="gallery__info-text">Paillett5</div>
+                </div>
+                <div id="w-node-e6dc59c8-e626-f59b-ab47-78484c2d38af-9b24b5cc" class="gallery__info-price">
+                  <div class="gallery__info-title--box">
+                    <div class="gallery__info-title">Price</div>
+                  </div>
+                  <div id="w-node-e6dc59c8-e626-f59b-ab47-78484c2d38b3-9b24b5cc" class="gallery__info-text--box">
+                    <div class="gallery__info-text--img">
+                      <div class="w-embed"><svg width="25" height="24" viewbox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <rect x="0.5" width="24" height="24" rx="12" fill="white"></rect>
+                          <g clip-path="url(#clip0_606_1259)">
+                            <path opacity="0.75" d="M12.4986 4V15.0512L17.4093 12.1484L12.4986 4Z" fill="black"></path>
+                            <path opacity="0.4" d="M12.4986 4L7.58768 12.1484L12.4986 15.0512V9.91619V4Z" fill="black"></path>
+                            <path opacity="0.75" d="M12.4986 15.9809V19.9998L17.4123 13.0796L12.4986 15.9809Z" fill="black"></path>
+                            <path opacity="0.4" d="M12.4986 19.9998V15.9809L7.58768 13.0796L12.4986 19.9998Z" fill="black"></path>
+                            <path opacity="0.6" d="M12.4986 15.051L17.4093 12.1482L12.4986 9.91602V15.051Z" fill="black"></path>
+                            <path opacity="0.5" d="M7.58768 12.1482L12.4986 15.051V9.91602L7.58768 12.1482Z" fill="black"></path>
+                          </g>
+                          <defs>
+                            <clippath id="clip0_606_1259">
+                              <rect width="16" height="16" fill="white" transform="translate(4.5 4)"></rect>
+                            </clippath>
+                          </defs>
+                        </svg></div>
+                    </div>
+                    <div class="gallery__info-text">0.031</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="w-node-_93d02e29-b143-c98d-5de8-4e103dfbcec5-9b24b5cc" class="gallery__item">
+              <div class="gallery__item-img"><img src="images/gallery-item-6.png" loading="lazy" alt=""></div>
+              <div class="gallery__item-info">
+                <div id="w-node-_93d02e29-b143-c98d-5de8-4e103dfbcec9-9b24b5cc" class="gallery__info-name">
+                  <div class="gallery__info-title--box">
+                    <div class="gallery__info-title">By Confetti</div>
+                    <div class="gallery__info-confirmed">
+                      <div class="w-embed"><svg width="18" height="18" viewbox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M8.08184 2.48588C8.39685 1.63299 9.60315 1.63299 9.91816 2.48588C10.1522 3.11948 10.9424 3.33123 11.4619 2.89952C12.1612 2.31841 13.2058 2.92156 13.0522 3.81769C12.9381 4.48341 13.5166 5.06192 14.1823 4.94779C15.0784 4.79416 15.6816 5.83884 15.1005 6.53809C14.6688 7.05756 14.8805 7.84782 15.5141 8.08184C16.367 8.39685 16.367 9.60315 15.5141 9.91816C14.8805 10.1522 14.6688 10.9424 15.1005 11.4619C15.6816 12.1612 15.0784 13.2058 14.1823 13.0522C13.5166 12.9381 12.9381 13.5166 13.0522 14.1823C13.2058 15.0784 12.1612 15.6816 11.4619 15.1005C10.9424 14.6688 10.1522 14.8805 9.91816 15.5141C9.60315 16.367 8.39685 16.367 8.08184 15.5141C7.84782 14.8805 7.05756 14.6688 6.53809 15.1005C5.83884 15.6816 4.79416 15.0784 4.94779 14.1823C5.06192 13.5166 4.48341 12.9381 3.81769 13.0522C2.92156 13.2058 2.31841 12.1612 2.89952 11.4619C3.33123 10.9424 3.11948 10.1522 2.48588 9.91816C1.63299 9.60315 1.63299 8.39685 2.48588 8.08184C3.11948 7.84782 3.33123 7.05756 2.89952 6.53809C2.31841 5.83884 2.92156 4.79416 3.81769 4.94779C4.48341 5.06192 5.06192 4.48341 4.94779 3.81769C4.79416 2.92156 5.83884 2.31841 6.53809 2.89952C7.05756 3.33123 7.84782 3.11948 8.08184 2.48588Z" fill="#3598F2"></path>
+                          <path d="M6 8.47826L8.32 11L12 7" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg></div>
+                    </div>
+                  </div>
+                  <div id="w-node-_93d02e29-b143-c98d-5de8-4e103dfbcecf-9b24b5cc" class="gallery__info-text">Heart</div>
+                </div>
+                <div id="w-node-_93d02e29-b143-c98d-5de8-4e103dfbced1-9b24b5cc" class="gallery__info-price">
+                  <div class="gallery__info-title--box">
+                    <div class="gallery__info-title">Price</div>
+                  </div>
+                  <div id="w-node-_93d02e29-b143-c98d-5de8-4e103dfbced5-9b24b5cc" class="gallery__info-text--box">
+                    <div class="gallery__info-text--img">
+                      <div class="w-embed"><svg width="25" height="24" viewbox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <rect x="0.5" width="24" height="24" rx="12" fill="white"></rect>
+                          <g clip-path="url(#clip0_606_1259)">
+                            <path opacity="0.75" d="M12.4986 4V15.0512L17.4093 12.1484L12.4986 4Z" fill="black"></path>
+                            <path opacity="0.4" d="M12.4986 4L7.58768 12.1484L12.4986 15.0512V9.91619V4Z" fill="black"></path>
+                            <path opacity="0.75" d="M12.4986 15.9809V19.9998L17.4123 13.0796L12.4986 15.9809Z" fill="black"></path>
+                            <path opacity="0.4" d="M12.4986 19.9998V15.9809L7.58768 13.0796L12.4986 19.9998Z" fill="black"></path>
+                            <path opacity="0.6" d="M12.4986 15.051L17.4093 12.1482L12.4986 9.91602V15.051Z" fill="black"></path>
+                            <path opacity="0.5" d="M7.58768 12.1482L12.4986 15.051V9.91602L7.58768 12.1482Z" fill="black"></path>
+                          </g>
+                          <defs>
+                            <clippath id="clip0_606_1259">
+                              <rect width="16" height="16" fill="white" transform="translate(4.5 4)"></rect>
+                            </clippath>
+                          </defs>
+                        </svg></div>
+                    </div>
+                    <div class="gallery__info-text">0.031</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="w-node-c0e4a6ef-8b7b-f458-2ff0-fe42a5972e23-9b24b5cc" class="gallery__item">
+              <div class="gallery__item-img"><img src="images/gallery-item-7.png" loading="lazy" alt=""></div>
+              <div class="gallery__item-info">
+                <div id="w-node-c0e4a6ef-8b7b-f458-2ff0-fe42a5972e27-9b24b5cc" class="gallery__info-name">
+                  <div class="gallery__info-title--box">
+                    <div class="gallery__info-title">By Confetti</div>
+                    <div class="gallery__info-confirmed">
+                      <div class="w-embed"><svg width="18" height="18" viewbox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M8.08184 2.48588C8.39685 1.63299 9.60315 1.63299 9.91816 2.48588C10.1522 3.11948 10.9424 3.33123 11.4619 2.89952C12.1612 2.31841 13.2058 2.92156 13.0522 3.81769C12.9381 4.48341 13.5166 5.06192 14.1823 4.94779C15.0784 4.79416 15.6816 5.83884 15.1005 6.53809C14.6688 7.05756 14.8805 7.84782 15.5141 8.08184C16.367 8.39685 16.367 9.60315 15.5141 9.91816C14.8805 10.1522 14.6688 10.9424 15.1005 11.4619C15.6816 12.1612 15.0784 13.2058 14.1823 13.0522C13.5166 12.9381 12.9381 13.5166 13.0522 14.1823C13.2058 15.0784 12.1612 15.6816 11.4619 15.1005C10.9424 14.6688 10.1522 14.8805 9.91816 15.5141C9.60315 16.367 8.39685 16.367 8.08184 15.5141C7.84782 14.8805 7.05756 14.6688 6.53809 15.1005C5.83884 15.6816 4.79416 15.0784 4.94779 14.1823C5.06192 13.5166 4.48341 12.9381 3.81769 13.0522C2.92156 13.2058 2.31841 12.1612 2.89952 11.4619C3.33123 10.9424 3.11948 10.1522 2.48588 9.91816C1.63299 9.60315 1.63299 8.39685 2.48588 8.08184C3.11948 7.84782 3.33123 7.05756 2.89952 6.53809C2.31841 5.83884 2.92156 4.79416 3.81769 4.94779C4.48341 5.06192 5.06192 4.48341 4.94779 3.81769C4.79416 2.92156 5.83884 2.31841 6.53809 2.89952C7.05756 3.33123 7.84782 3.11948 8.08184 2.48588Z" fill="#3598F2"></path>
+                          <path d="M6 8.47826L8.32 11L12 7" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg></div>
+                    </div>
+                  </div>
+                  <div id="w-node-c0e4a6ef-8b7b-f458-2ff0-fe42a5972e2d-9b24b5cc" class="gallery__info-text">Star</div>
+                </div>
+                <div id="w-node-c0e4a6ef-8b7b-f458-2ff0-fe42a5972e2f-9b24b5cc" class="gallery__info-price">
+                  <div class="gallery__info-title--box">
+                    <div class="gallery__info-title">Price</div>
+                  </div>
+                  <div id="w-node-c0e4a6ef-8b7b-f458-2ff0-fe42a5972e33-9b24b5cc" class="gallery__info-text--box">
+                    <div class="gallery__info-text--img">
+                      <div class="w-embed"><svg width="25" height="24" viewbox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <rect x="0.5" width="24" height="24" rx="12" fill="white"></rect>
+                          <g clip-path="url(#clip0_606_1259)">
+                            <path opacity="0.75" d="M12.4986 4V15.0512L17.4093 12.1484L12.4986 4Z" fill="black"></path>
+                            <path opacity="0.4" d="M12.4986 4L7.58768 12.1484L12.4986 15.0512V9.91619V4Z" fill="black"></path>
+                            <path opacity="0.75" d="M12.4986 15.9809V19.9998L17.4123 13.0796L12.4986 15.9809Z" fill="black"></path>
+                            <path opacity="0.4" d="M12.4986 19.9998V15.9809L7.58768 13.0796L12.4986 19.9998Z" fill="black"></path>
+                            <path opacity="0.6" d="M12.4986 15.051L17.4093 12.1482L12.4986 9.91602V15.051Z" fill="black"></path>
+                            <path opacity="0.5" d="M7.58768 12.1482L12.4986 15.051V9.91602L7.58768 12.1482Z" fill="black"></path>
+                          </g>
+                          <defs>
+                            <clippath id="clip0_606_1259">
+                              <rect width="16" height="16" fill="white" transform="translate(4.5 4)"></rect>
+                            </clippath>
+                          </defs>
+                        </svg></div>
+                    </div>
+                    <div class="gallery__info-text">0.031</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="w-node-f87e6558-cedc-1940-e1ff-f024e06d01c0-9b24b5cc" class="gallery__item">
+              <div class="gallery__item-img"><img src="images/gallery-item-8.png" loading="lazy" alt=""></div>
+              <div class="gallery__item-info">
+                <div id="w-node-f87e6558-cedc-1940-e1ff-f024e06d01c4-9b24b5cc" class="gallery__info-name">
+                  <div class="gallery__info-title--box">
+                    <div class="gallery__info-title">By Confetti</div>
+                    <div class="gallery__info-confirmed">
+                      <div class="w-embed"><svg width="18" height="18" viewbox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M8.08184 2.48588C8.39685 1.63299 9.60315 1.63299 9.91816 2.48588C10.1522 3.11948 10.9424 3.33123 11.4619 2.89952C12.1612 2.31841 13.2058 2.92156 13.0522 3.81769C12.9381 4.48341 13.5166 5.06192 14.1823 4.94779C15.0784 4.79416 15.6816 5.83884 15.1005 6.53809C14.6688 7.05756 14.8805 7.84782 15.5141 8.08184C16.367 8.39685 16.367 9.60315 15.5141 9.91816C14.8805 10.1522 14.6688 10.9424 15.1005 11.4619C15.6816 12.1612 15.0784 13.2058 14.1823 13.0522C13.5166 12.9381 12.9381 13.5166 13.0522 14.1823C13.2058 15.0784 12.1612 15.6816 11.4619 15.1005C10.9424 14.6688 10.1522 14.8805 9.91816 15.5141C9.60315 16.367 8.39685 16.367 8.08184 15.5141C7.84782 14.8805 7.05756 14.6688 6.53809 15.1005C5.83884 15.6816 4.79416 15.0784 4.94779 14.1823C5.06192 13.5166 4.48341 12.9381 3.81769 13.0522C2.92156 13.2058 2.31841 12.1612 2.89952 11.4619C3.33123 10.9424 3.11948 10.1522 2.48588 9.91816C1.63299 9.60315 1.63299 8.39685 2.48588 8.08184C3.11948 7.84782 3.33123 7.05756 2.89952 6.53809C2.31841 5.83884 2.92156 4.79416 3.81769 4.94779C4.48341 5.06192 5.06192 4.48341 4.94779 3.81769C4.79416 2.92156 5.83884 2.31841 6.53809 2.89952C7.05756 3.33123 7.84782 3.11948 8.08184 2.48588Z" fill="#3598F2"></path>
+                          <path d="M6 8.47826L8.32 11L12 7" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg></div>
+                    </div>
+                  </div>
+                  <div id="w-node-f87e6558-cedc-1940-e1ff-f024e06d01ca-9b24b5cc" class="gallery__info-text">Spring</div>
+                </div>
+                <div id="w-node-f87e6558-cedc-1940-e1ff-f024e06d01cc-9b24b5cc" class="gallery__info-price">
+                  <div class="gallery__info-title--box">
+                    <div class="gallery__info-title">Price</div>
+                  </div>
+                  <div id="w-node-f87e6558-cedc-1940-e1ff-f024e06d01d0-9b24b5cc" class="gallery__info-text--box">
+                    <div class="gallery__info-text--img">
+                      <div class="w-embed"><svg width="25" height="24" viewbox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <rect x="0.5" width="24" height="24" rx="12" fill="white"></rect>
+                          <g clip-path="url(#clip0_606_1259)">
+                            <path opacity="0.75" d="M12.4986 4V15.0512L17.4093 12.1484L12.4986 4Z" fill="black"></path>
+                            <path opacity="0.4" d="M12.4986 4L7.58768 12.1484L12.4986 15.0512V9.91619V4Z" fill="black"></path>
+                            <path opacity="0.75" d="M12.4986 15.9809V19.9998L17.4123 13.0796L12.4986 15.9809Z" fill="black"></path>
+                            <path opacity="0.4" d="M12.4986 19.9998V15.9809L7.58768 13.0796L12.4986 19.9998Z" fill="black"></path>
+                            <path opacity="0.6" d="M12.4986 15.051L17.4093 12.1482L12.4986 9.91602V15.051Z" fill="black"></path>
+                            <path opacity="0.5" d="M7.58768 12.1482L12.4986 15.051V9.91602L7.58768 12.1482Z" fill="black"></path>
+                          </g>
+                          <defs>
+                            <clippath id="clip0_606_1259">
+                              <rect width="16" height="16" fill="white" transform="translate(4.5 4)"></rect>
+                            </clippath>
+                          </defs>
+                        </svg></div>
+                    </div>
+                    <div class="gallery__info-text">0.031</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="w-node-_75f9dbbb-17ca-00cf-00fe-9e1a672b0fce-9b24b5cc" class="btn">
+              <a href="#" class="button-inner button-gradient gallery_btn w-inline-block">
+                <div><span>See All NFT</span></div>
+              </a>
+            </div>
+          </div>
+          <div class="gallery__mobile">
+            <div class="swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="gallery__item">
+                    <div class="gallery__item-img"><img src="images/gallery-item-1.png" loading="lazy" alt=""></div>
+                    <div class="gallery__item-info">
+                      <div id="w-node-_5fa59fd9-3972-a199-d77b-52c5f7318182-9b24b5cc" class="gallery__info-name">
+                        <div class="gallery__info-title--box">
+                          <div class="gallery__info-title">By Confetti</div>
+                          <div class="gallery__info-confirmed">
+                            <div class="w-embed"><svg width="18" height="18" viewbox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8.08184 2.48588C8.39685 1.63299 9.60315 1.63299 9.91816 2.48588C10.1522 3.11948 10.9424 3.33123 11.4619 2.89952C12.1612 2.31841 13.2058 2.92156 13.0522 3.81769C12.9381 4.48341 13.5166 5.06192 14.1823 4.94779C15.0784 4.79416 15.6816 5.83884 15.1005 6.53809C14.6688 7.05756 14.8805 7.84782 15.5141 8.08184C16.367 8.39685 16.367 9.60315 15.5141 9.91816C14.8805 10.1522 14.6688 10.9424 15.1005 11.4619C15.6816 12.1612 15.0784 13.2058 14.1823 13.0522C13.5166 12.9381 12.9381 13.5166 13.0522 14.1823C13.2058 15.0784 12.1612 15.6816 11.4619 15.1005C10.9424 14.6688 10.1522 14.8805 9.91816 15.5141C9.60315 16.367 8.39685 16.367 8.08184 15.5141C7.84782 14.8805 7.05756 14.6688 6.53809 15.1005C5.83884 15.6816 4.79416 15.0784 4.94779 14.1823C5.06192 13.5166 4.48341 12.9381 3.81769 13.0522C2.92156 13.2058 2.31841 12.1612 2.89952 11.4619C3.33123 10.9424 3.11948 10.1522 2.48588 9.91816C1.63299 9.60315 1.63299 8.39685 2.48588 8.08184C3.11948 7.84782 3.33123 7.05756 2.89952 6.53809C2.31841 5.83884 2.92156 4.79416 3.81769 4.94779C4.48341 5.06192 5.06192 4.48341 4.94779 3.81769C4.79416 2.92156 5.83884 2.31841 6.53809 2.89952C7.05756 3.33123 7.84782 3.11948 8.08184 2.48588Z" fill="#3598F2"></path>
+                                <path d="M6 8.47826L8.32 11L12 7" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                              </svg></div>
+                          </div>
+                        </div>
+                        <div id="w-node-_5fa59fd9-3972-a199-d77b-52c5f7318188-9b24b5cc" class="gallery__info-text">Star</div>
+                      </div>
+                      <div id="w-node-_5fa59fd9-3972-a199-d77b-52c5f731818a-9b24b5cc" class="gallery__info-price">
+                        <div class="gallery__info-title--box">
+                          <div class="gallery__info-title">Price</div>
+                        </div>
+                        <div id="w-node-_5fa59fd9-3972-a199-d77b-52c5f731818e-9b24b5cc" class="gallery__info-text--box">
+                          <div class="gallery__info-text--img">
+                            <div class="w-embed"><svg width="25" height="24" viewbox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="0.5" width="24" height="24" rx="12" fill="white"></rect>
+                                <g clip-path="url(#clip0_606_1259)">
+                                  <path opacity="0.75" d="M12.4986 4V15.0512L17.4093 12.1484L12.4986 4Z" fill="black"></path>
+                                  <path opacity="0.4" d="M12.4986 4L7.58768 12.1484L12.4986 15.0512V9.91619V4Z" fill="black"></path>
+                                  <path opacity="0.75" d="M12.4986 15.9809V19.9998L17.4123 13.0796L12.4986 15.9809Z" fill="black"></path>
+                                  <path opacity="0.4" d="M12.4986 19.9998V15.9809L7.58768 13.0796L12.4986 19.9998Z" fill="black"></path>
+                                  <path opacity="0.6" d="M12.4986 15.051L17.4093 12.1482L12.4986 9.91602V15.051Z" fill="black"></path>
+                                  <path opacity="0.5" d="M7.58768 12.1482L12.4986 15.051V9.91602L7.58768 12.1482Z" fill="black"></path>
+                                </g>
+                                <defs>
+                                  <clippath id="clip0_606_1259">
+                                    <rect width="16" height="16" fill="white" transform="translate(4.5 4)"></rect>
+                                  </clippath>
+                                </defs>
+                              </svg></div>
+                          </div>
+                          <div class="gallery__info-text">0.031</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="gallery__item">
+                    <div class="gallery__item-img"><img src="images/gallery-item-2.png" loading="lazy" alt=""></div>
+                    <div class="gallery__item-info">
+                      <div id="w-node-_29092851-b8cc-f5b7-a153-a6d7217adabd-9b24b5cc" class="gallery__info-name">
+                        <div class="gallery__info-title--box">
+                          <div class="gallery__info-title">By Confetti</div>
+                          <div class="gallery__info-confirmed">
+                            <div class="w-embed"><svg width="18" height="18" viewbox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8.08184 2.48588C8.39685 1.63299 9.60315 1.63299 9.91816 2.48588C10.1522 3.11948 10.9424 3.33123 11.4619 2.89952C12.1612 2.31841 13.2058 2.92156 13.0522 3.81769C12.9381 4.48341 13.5166 5.06192 14.1823 4.94779C15.0784 4.79416 15.6816 5.83884 15.1005 6.53809C14.6688 7.05756 14.8805 7.84782 15.5141 8.08184C16.367 8.39685 16.367 9.60315 15.5141 9.91816C14.8805 10.1522 14.6688 10.9424 15.1005 11.4619C15.6816 12.1612 15.0784 13.2058 14.1823 13.0522C13.5166 12.9381 12.9381 13.5166 13.0522 14.1823C13.2058 15.0784 12.1612 15.6816 11.4619 15.1005C10.9424 14.6688 10.1522 14.8805 9.91816 15.5141C9.60315 16.367 8.39685 16.367 8.08184 15.5141C7.84782 14.8805 7.05756 14.6688 6.53809 15.1005C5.83884 15.6816 4.79416 15.0784 4.94779 14.1823C5.06192 13.5166 4.48341 12.9381 3.81769 13.0522C2.92156 13.2058 2.31841 12.1612 2.89952 11.4619C3.33123 10.9424 3.11948 10.1522 2.48588 9.91816C1.63299 9.60315 1.63299 8.39685 2.48588 8.08184C3.11948 7.84782 3.33123 7.05756 2.89952 6.53809C2.31841 5.83884 2.92156 4.79416 3.81769 4.94779C4.48341 5.06192 5.06192 4.48341 4.94779 3.81769C4.79416 2.92156 5.83884 2.31841 6.53809 2.89952C7.05756 3.33123 7.84782 3.11948 8.08184 2.48588Z" fill="#3598F2"></path>
+                                <path d="M6 8.47826L8.32 11L12 7" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                              </svg></div>
+                          </div>
+                        </div>
+                        <div id="w-node-_29092851-b8cc-f5b7-a153-a6d7217adac3-9b24b5cc" class="gallery__info-text">Heart</div>
+                      </div>
+                      <div id="w-node-_29092851-b8cc-f5b7-a153-a6d7217adac5-9b24b5cc" class="gallery__info-price">
+                        <div class="gallery__info-title--box">
+                          <div class="gallery__info-title">Price</div>
+                        </div>
+                        <div id="w-node-_29092851-b8cc-f5b7-a153-a6d7217adac9-9b24b5cc" class="gallery__info-text--box">
+                          <div class="gallery__info-text--img">
+                            <div class="w-embed"><svg width="25" height="24" viewbox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="0.5" width="24" height="24" rx="12" fill="white"></rect>
+                                <g clip-path="url(#clip0_606_1259)">
+                                  <path opacity="0.75" d="M12.4986 4V15.0512L17.4093 12.1484L12.4986 4Z" fill="black"></path>
+                                  <path opacity="0.4" d="M12.4986 4L7.58768 12.1484L12.4986 15.0512V9.91619V4Z" fill="black"></path>
+                                  <path opacity="0.75" d="M12.4986 15.9809V19.9998L17.4123 13.0796L12.4986 15.9809Z" fill="black"></path>
+                                  <path opacity="0.4" d="M12.4986 19.9998V15.9809L7.58768 13.0796L12.4986 19.9998Z" fill="black"></path>
+                                  <path opacity="0.6" d="M12.4986 15.051L17.4093 12.1482L12.4986 9.91602V15.051Z" fill="black"></path>
+                                  <path opacity="0.5" d="M7.58768 12.1482L12.4986 15.051V9.91602L7.58768 12.1482Z" fill="black"></path>
+                                </g>
+                                <defs>
+                                  <clippath id="clip0_606_1259">
+                                    <rect width="16" height="16" fill="white" transform="translate(4.5 4)"></rect>
+                                  </clippath>
+                                </defs>
+                              </svg></div>
+                          </div>
+                          <div class="gallery__info-text">0.031</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="gallery__item">
+                    <div class="gallery__item-img"><img src="images/gallery-item-3.png" loading="lazy" alt=""></div>
+                    <div class="gallery__item-info">
+                      <div id="w-node-a026213e-556b-81ef-5ce7-903b4298f290-9b24b5cc" class="gallery__info-name">
+                        <div class="gallery__info-title--box">
+                          <div class="gallery__info-title">By Confetti</div>
+                          <div class="gallery__info-confirmed">
+                            <div class="w-embed"><svg width="18" height="18" viewbox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8.08184 2.48588C8.39685 1.63299 9.60315 1.63299 9.91816 2.48588C10.1522 3.11948 10.9424 3.33123 11.4619 2.89952C12.1612 2.31841 13.2058 2.92156 13.0522 3.81769C12.9381 4.48341 13.5166 5.06192 14.1823 4.94779C15.0784 4.79416 15.6816 5.83884 15.1005 6.53809C14.6688 7.05756 14.8805 7.84782 15.5141 8.08184C16.367 8.39685 16.367 9.60315 15.5141 9.91816C14.8805 10.1522 14.6688 10.9424 15.1005 11.4619C15.6816 12.1612 15.0784 13.2058 14.1823 13.0522C13.5166 12.9381 12.9381 13.5166 13.0522 14.1823C13.2058 15.0784 12.1612 15.6816 11.4619 15.1005C10.9424 14.6688 10.1522 14.8805 9.91816 15.5141C9.60315 16.367 8.39685 16.367 8.08184 15.5141C7.84782 14.8805 7.05756 14.6688 6.53809 15.1005C5.83884 15.6816 4.79416 15.0784 4.94779 14.1823C5.06192 13.5166 4.48341 12.9381 3.81769 13.0522C2.92156 13.2058 2.31841 12.1612 2.89952 11.4619C3.33123 10.9424 3.11948 10.1522 2.48588 9.91816C1.63299 9.60315 1.63299 8.39685 2.48588 8.08184C3.11948 7.84782 3.33123 7.05756 2.89952 6.53809C2.31841 5.83884 2.92156 4.79416 3.81769 4.94779C4.48341 5.06192 5.06192 4.48341 4.94779 3.81769C4.79416 2.92156 5.83884 2.31841 6.53809 2.89952C7.05756 3.33123 7.84782 3.11948 8.08184 2.48588Z" fill="#3598F2"></path>
+                                <path d="M6 8.47826L8.32 11L12 7" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                              </svg></div>
+                          </div>
+                        </div>
+                        <div id="w-node-a026213e-556b-81ef-5ce7-903b4298f296-9b24b5cc" class="gallery__info-text">Spring</div>
+                      </div>
+                      <div id="w-node-a026213e-556b-81ef-5ce7-903b4298f298-9b24b5cc" class="gallery__info-price">
+                        <div class="gallery__info-title--box">
+                          <div class="gallery__info-title">Price</div>
+                        </div>
+                        <div id="w-node-a026213e-556b-81ef-5ce7-903b4298f29c-9b24b5cc" class="gallery__info-text--box">
+                          <div class="gallery__info-text--img">
+                            <div class="w-embed"><svg width="25" height="24" viewbox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="0.5" width="24" height="24" rx="12" fill="white"></rect>
+                                <g clip-path="url(#clip0_606_1259)">
+                                  <path opacity="0.75" d="M12.4986 4V15.0512L17.4093 12.1484L12.4986 4Z" fill="black"></path>
+                                  <path opacity="0.4" d="M12.4986 4L7.58768 12.1484L12.4986 15.0512V9.91619V4Z" fill="black"></path>
+                                  <path opacity="0.75" d="M12.4986 15.9809V19.9998L17.4123 13.0796L12.4986 15.9809Z" fill="black"></path>
+                                  <path opacity="0.4" d="M12.4986 19.9998V15.9809L7.58768 13.0796L12.4986 19.9998Z" fill="black"></path>
+                                  <path opacity="0.6" d="M12.4986 15.051L17.4093 12.1482L12.4986 9.91602V15.051Z" fill="black"></path>
+                                  <path opacity="0.5" d="M7.58768 12.1482L12.4986 15.051V9.91602L7.58768 12.1482Z" fill="black"></path>
+                                </g>
+                                <defs>
+                                  <clippath id="clip0_606_1259">
+                                    <rect width="16" height="16" fill="white" transform="translate(4.5 4)"></rect>
+                                  </clippath>
+                                </defs>
+                              </svg></div>
+                          </div>
+                          <div class="gallery__info-text">0.031</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="gallery__item">
+                    <div class="gallery__item-img"><img src="images/gallery-item-4.png" loading="lazy" alt=""></div>
+                    <div class="gallery__item-info">
+                      <div id="w-node-_22ac1688-84c0-6aba-a56d-eb8c057778f8-9b24b5cc" class="gallery__info-name">
+                        <div class="gallery__info-title--box">
+                          <div class="gallery__info-title">By Confetti</div>
+                          <div class="gallery__info-confirmed">
+                            <div class="w-embed"><svg width="18" height="18" viewbox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8.08184 2.48588C8.39685 1.63299 9.60315 1.63299 9.91816 2.48588C10.1522 3.11948 10.9424 3.33123 11.4619 2.89952C12.1612 2.31841 13.2058 2.92156 13.0522 3.81769C12.9381 4.48341 13.5166 5.06192 14.1823 4.94779C15.0784 4.79416 15.6816 5.83884 15.1005 6.53809C14.6688 7.05756 14.8805 7.84782 15.5141 8.08184C16.367 8.39685 16.367 9.60315 15.5141 9.91816C14.8805 10.1522 14.6688 10.9424 15.1005 11.4619C15.6816 12.1612 15.0784 13.2058 14.1823 13.0522C13.5166 12.9381 12.9381 13.5166 13.0522 14.1823C13.2058 15.0784 12.1612 15.6816 11.4619 15.1005C10.9424 14.6688 10.1522 14.8805 9.91816 15.5141C9.60315 16.367 8.39685 16.367 8.08184 15.5141C7.84782 14.8805 7.05756 14.6688 6.53809 15.1005C5.83884 15.6816 4.79416 15.0784 4.94779 14.1823C5.06192 13.5166 4.48341 12.9381 3.81769 13.0522C2.92156 13.2058 2.31841 12.1612 2.89952 11.4619C3.33123 10.9424 3.11948 10.1522 2.48588 9.91816C1.63299 9.60315 1.63299 8.39685 2.48588 8.08184C3.11948 7.84782 3.33123 7.05756 2.89952 6.53809C2.31841 5.83884 2.92156 4.79416 3.81769 4.94779C4.48341 5.06192 5.06192 4.48341 4.94779 3.81769C4.79416 2.92156 5.83884 2.31841 6.53809 2.89952C7.05756 3.33123 7.84782 3.11948 8.08184 2.48588Z" fill="#3598F2"></path>
+                                <path d="M6 8.47826L8.32 11L12 7" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                              </svg></div>
+                          </div>
+                        </div>
+                        <div id="w-node-_22ac1688-84c0-6aba-a56d-eb8c057778fe-9b24b5cc" class="gallery__info-text">Paillett5</div>
+                      </div>
+                      <div id="w-node-_22ac1688-84c0-6aba-a56d-eb8c05777900-9b24b5cc" class="gallery__info-price">
+                        <div class="gallery__info-title--box">
+                          <div class="gallery__info-title">Price</div>
+                        </div>
+                        <div id="w-node-_22ac1688-84c0-6aba-a56d-eb8c05777904-9b24b5cc" class="gallery__info-text--box">
+                          <div class="gallery__info-text--img">
+                            <div class="w-embed"><svg width="25" height="24" viewbox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="0.5" width="24" height="24" rx="12" fill="white"></rect>
+                                <g clip-path="url(#clip0_606_1259)">
+                                  <path opacity="0.75" d="M12.4986 4V15.0512L17.4093 12.1484L12.4986 4Z" fill="black"></path>
+                                  <path opacity="0.4" d="M12.4986 4L7.58768 12.1484L12.4986 15.0512V9.91619V4Z" fill="black"></path>
+                                  <path opacity="0.75" d="M12.4986 15.9809V19.9998L17.4123 13.0796L12.4986 15.9809Z" fill="black"></path>
+                                  <path opacity="0.4" d="M12.4986 19.9998V15.9809L7.58768 13.0796L12.4986 19.9998Z" fill="black"></path>
+                                  <path opacity="0.6" d="M12.4986 15.051L17.4093 12.1482L12.4986 9.91602V15.051Z" fill="black"></path>
+                                  <path opacity="0.5" d="M7.58768 12.1482L12.4986 15.051V9.91602L7.58768 12.1482Z" fill="black"></path>
+                                </g>
+                                <defs>
+                                  <clippath id="clip0_606_1259">
+                                    <rect width="16" height="16" fill="white" transform="translate(4.5 4)"></rect>
+                                  </clippath>
+                                </defs>
+                              </svg></div>
+                          </div>
+                          <div class="gallery__info-text">0.031</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="gallery__item">
+                    <div class="gallery__item-img"><img src="images/gallery-item-5.png" loading="lazy" alt=""></div>
+                    <div class="gallery__item-info">
+                      <div id="w-node-_70996a59-aa97-e137-cd8f-1564eb2e913e-9b24b5cc" class="gallery__info-name">
+                        <div class="gallery__info-title--box">
+                          <div class="gallery__info-title">By Confetti</div>
+                          <div class="gallery__info-confirmed">
+                            <div class="w-embed"><svg width="18" height="18" viewbox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8.08184 2.48588C8.39685 1.63299 9.60315 1.63299 9.91816 2.48588C10.1522 3.11948 10.9424 3.33123 11.4619 2.89952C12.1612 2.31841 13.2058 2.92156 13.0522 3.81769C12.9381 4.48341 13.5166 5.06192 14.1823 4.94779C15.0784 4.79416 15.6816 5.83884 15.1005 6.53809C14.6688 7.05756 14.8805 7.84782 15.5141 8.08184C16.367 8.39685 16.367 9.60315 15.5141 9.91816C14.8805 10.1522 14.6688 10.9424 15.1005 11.4619C15.6816 12.1612 15.0784 13.2058 14.1823 13.0522C13.5166 12.9381 12.9381 13.5166 13.0522 14.1823C13.2058 15.0784 12.1612 15.6816 11.4619 15.1005C10.9424 14.6688 10.1522 14.8805 9.91816 15.5141C9.60315 16.367 8.39685 16.367 8.08184 15.5141C7.84782 14.8805 7.05756 14.6688 6.53809 15.1005C5.83884 15.6816 4.79416 15.0784 4.94779 14.1823C5.06192 13.5166 4.48341 12.9381 3.81769 13.0522C2.92156 13.2058 2.31841 12.1612 2.89952 11.4619C3.33123 10.9424 3.11948 10.1522 2.48588 9.91816C1.63299 9.60315 1.63299 8.39685 2.48588 8.08184C3.11948 7.84782 3.33123 7.05756 2.89952 6.53809C2.31841 5.83884 2.92156 4.79416 3.81769 4.94779C4.48341 5.06192 5.06192 4.48341 4.94779 3.81769C4.79416 2.92156 5.83884 2.31841 6.53809 2.89952C7.05756 3.33123 7.84782 3.11948 8.08184 2.48588Z" fill="#3598F2"></path>
+                                <path d="M6 8.47826L8.32 11L12 7" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                              </svg></div>
+                          </div>
+                        </div>
+                        <div id="w-node-_70996a59-aa97-e137-cd8f-1564eb2e9144-9b24b5cc" class="gallery__info-text">Paillett5</div>
+                      </div>
+                      <div id="w-node-_70996a59-aa97-e137-cd8f-1564eb2e9146-9b24b5cc" class="gallery__info-price">
+                        <div class="gallery__info-title--box">
+                          <div class="gallery__info-title">Price</div>
+                        </div>
+                        <div id="w-node-_70996a59-aa97-e137-cd8f-1564eb2e914a-9b24b5cc" class="gallery__info-text--box">
+                          <div class="gallery__info-text--img">
+                            <div class="w-embed"><svg width="25" height="24" viewbox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="0.5" width="24" height="24" rx="12" fill="white"></rect>
+                                <g clip-path="url(#clip0_606_1259)">
+                                  <path opacity="0.75" d="M12.4986 4V15.0512L17.4093 12.1484L12.4986 4Z" fill="black"></path>
+                                  <path opacity="0.4" d="M12.4986 4L7.58768 12.1484L12.4986 15.0512V9.91619V4Z" fill="black"></path>
+                                  <path opacity="0.75" d="M12.4986 15.9809V19.9998L17.4123 13.0796L12.4986 15.9809Z" fill="black"></path>
+                                  <path opacity="0.4" d="M12.4986 19.9998V15.9809L7.58768 13.0796L12.4986 19.9998Z" fill="black"></path>
+                                  <path opacity="0.6" d="M12.4986 15.051L17.4093 12.1482L12.4986 9.91602V15.051Z" fill="black"></path>
+                                  <path opacity="0.5" d="M7.58768 12.1482L12.4986 15.051V9.91602L7.58768 12.1482Z" fill="black"></path>
+                                </g>
+                                <defs>
+                                  <clippath id="clip0_606_1259">
+                                    <rect width="16" height="16" fill="white" transform="translate(4.5 4)"></rect>
+                                  </clippath>
+                                </defs>
+                              </svg></div>
+                          </div>
+                          <div class="gallery__info-text">0.031</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="gallery__item">
+                    <div class="gallery__item-img"><img src="images/gallery-item-6.png" loading="lazy" alt=""></div>
+                    <div class="gallery__item-info">
+                      <div id="w-node-_7c3bc8ec-95e5-d4bb-ce8b-f4ad9db5ce2b-9b24b5cc" class="gallery__info-name">
+                        <div class="gallery__info-title--box">
+                          <div class="gallery__info-title">By Confetti</div>
+                          <div class="gallery__info-confirmed">
+                            <div class="w-embed"><svg width="18" height="18" viewbox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8.08184 2.48588C8.39685 1.63299 9.60315 1.63299 9.91816 2.48588C10.1522 3.11948 10.9424 3.33123 11.4619 2.89952C12.1612 2.31841 13.2058 2.92156 13.0522 3.81769C12.9381 4.48341 13.5166 5.06192 14.1823 4.94779C15.0784 4.79416 15.6816 5.83884 15.1005 6.53809C14.6688 7.05756 14.8805 7.84782 15.5141 8.08184C16.367 8.39685 16.367 9.60315 15.5141 9.91816C14.8805 10.1522 14.6688 10.9424 15.1005 11.4619C15.6816 12.1612 15.0784 13.2058 14.1823 13.0522C13.5166 12.9381 12.9381 13.5166 13.0522 14.1823C13.2058 15.0784 12.1612 15.6816 11.4619 15.1005C10.9424 14.6688 10.1522 14.8805 9.91816 15.5141C9.60315 16.367 8.39685 16.367 8.08184 15.5141C7.84782 14.8805 7.05756 14.6688 6.53809 15.1005C5.83884 15.6816 4.79416 15.0784 4.94779 14.1823C5.06192 13.5166 4.48341 12.9381 3.81769 13.0522C2.92156 13.2058 2.31841 12.1612 2.89952 11.4619C3.33123 10.9424 3.11948 10.1522 2.48588 9.91816C1.63299 9.60315 1.63299 8.39685 2.48588 8.08184C3.11948 7.84782 3.33123 7.05756 2.89952 6.53809C2.31841 5.83884 2.92156 4.79416 3.81769 4.94779C4.48341 5.06192 5.06192 4.48341 4.94779 3.81769C4.79416 2.92156 5.83884 2.31841 6.53809 2.89952C7.05756 3.33123 7.84782 3.11948 8.08184 2.48588Z" fill="#3598F2"></path>
+                                <path d="M6 8.47826L8.32 11L12 7" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                              </svg></div>
+                          </div>
+                        </div>
+                        <div id="w-node-_7c3bc8ec-95e5-d4bb-ce8b-f4ad9db5ce31-9b24b5cc" class="gallery__info-text">Heart</div>
+                      </div>
+                      <div id="w-node-_7c3bc8ec-95e5-d4bb-ce8b-f4ad9db5ce33-9b24b5cc" class="gallery__info-price">
+                        <div class="gallery__info-title--box">
+                          <div class="gallery__info-title">Price</div>
+                        </div>
+                        <div id="w-node-_7c3bc8ec-95e5-d4bb-ce8b-f4ad9db5ce37-9b24b5cc" class="gallery__info-text--box">
+                          <div class="gallery__info-text--img">
+                            <div class="w-embed"><svg width="25" height="24" viewbox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="0.5" width="24" height="24" rx="12" fill="white"></rect>
+                                <g clip-path="url(#clip0_606_1259)">
+                                  <path opacity="0.75" d="M12.4986 4V15.0512L17.4093 12.1484L12.4986 4Z" fill="black"></path>
+                                  <path opacity="0.4" d="M12.4986 4L7.58768 12.1484L12.4986 15.0512V9.91619V4Z" fill="black"></path>
+                                  <path opacity="0.75" d="M12.4986 15.9809V19.9998L17.4123 13.0796L12.4986 15.9809Z" fill="black"></path>
+                                  <path opacity="0.4" d="M12.4986 19.9998V15.9809L7.58768 13.0796L12.4986 19.9998Z" fill="black"></path>
+                                  <path opacity="0.6" d="M12.4986 15.051L17.4093 12.1482L12.4986 9.91602V15.051Z" fill="black"></path>
+                                  <path opacity="0.5" d="M7.58768 12.1482L12.4986 15.051V9.91602L7.58768 12.1482Z" fill="black"></path>
+                                </g>
+                                <defs>
+                                  <clippath id="clip0_606_1259">
+                                    <rect width="16" height="16" fill="white" transform="translate(4.5 4)"></rect>
+                                  </clippath>
+                                </defs>
+                              </svg></div>
+                          </div>
+                          <div class="gallery__info-text">0.031</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="gallery__item">
+                    <div class="gallery__item-img"><img src="images/gallery-item-7.png" loading="lazy" alt=""></div>
+                    <div class="gallery__item-info">
+                      <div id="w-node-_2a39c71f-38f8-5b65-4f99-7abfdf585284-9b24b5cc" class="gallery__info-name">
+                        <div class="gallery__info-title--box">
+                          <div class="gallery__info-title">By Confetti</div>
+                          <div class="gallery__info-confirmed">
+                            <div class="w-embed"><svg width="18" height="18" viewbox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8.08184 2.48588C8.39685 1.63299 9.60315 1.63299 9.91816 2.48588C10.1522 3.11948 10.9424 3.33123 11.4619 2.89952C12.1612 2.31841 13.2058 2.92156 13.0522 3.81769C12.9381 4.48341 13.5166 5.06192 14.1823 4.94779C15.0784 4.79416 15.6816 5.83884 15.1005 6.53809C14.6688 7.05756 14.8805 7.84782 15.5141 8.08184C16.367 8.39685 16.367 9.60315 15.5141 9.91816C14.8805 10.1522 14.6688 10.9424 15.1005 11.4619C15.6816 12.1612 15.0784 13.2058 14.1823 13.0522C13.5166 12.9381 12.9381 13.5166 13.0522 14.1823C13.2058 15.0784 12.1612 15.6816 11.4619 15.1005C10.9424 14.6688 10.1522 14.8805 9.91816 15.5141C9.60315 16.367 8.39685 16.367 8.08184 15.5141C7.84782 14.8805 7.05756 14.6688 6.53809 15.1005C5.83884 15.6816 4.79416 15.0784 4.94779 14.1823C5.06192 13.5166 4.48341 12.9381 3.81769 13.0522C2.92156 13.2058 2.31841 12.1612 2.89952 11.4619C3.33123 10.9424 3.11948 10.1522 2.48588 9.91816C1.63299 9.60315 1.63299 8.39685 2.48588 8.08184C3.11948 7.84782 3.33123 7.05756 2.89952 6.53809C2.31841 5.83884 2.92156 4.79416 3.81769 4.94779C4.48341 5.06192 5.06192 4.48341 4.94779 3.81769C4.79416 2.92156 5.83884 2.31841 6.53809 2.89952C7.05756 3.33123 7.84782 3.11948 8.08184 2.48588Z" fill="#3598F2"></path>
+                                <path d="M6 8.47826L8.32 11L12 7" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                              </svg></div>
+                          </div>
+                        </div>
+                        <div id="w-node-_2a39c71f-38f8-5b65-4f99-7abfdf58528a-9b24b5cc" class="gallery__info-text">Star</div>
+                      </div>
+                      <div id="w-node-_2a39c71f-38f8-5b65-4f99-7abfdf58528c-9b24b5cc" class="gallery__info-price">
+                        <div class="gallery__info-title--box">
+                          <div class="gallery__info-title">Price</div>
+                        </div>
+                        <div id="w-node-_2a39c71f-38f8-5b65-4f99-7abfdf585290-9b24b5cc" class="gallery__info-text--box">
+                          <div class="gallery__info-text--img">
+                            <div class="w-embed"><svg width="25" height="24" viewbox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="0.5" width="24" height="24" rx="12" fill="white"></rect>
+                                <g clip-path="url(#clip0_606_1259)">
+                                  <path opacity="0.75" d="M12.4986 4V15.0512L17.4093 12.1484L12.4986 4Z" fill="black"></path>
+                                  <path opacity="0.4" d="M12.4986 4L7.58768 12.1484L12.4986 15.0512V9.91619V4Z" fill="black"></path>
+                                  <path opacity="0.75" d="M12.4986 15.9809V19.9998L17.4123 13.0796L12.4986 15.9809Z" fill="black"></path>
+                                  <path opacity="0.4" d="M12.4986 19.9998V15.9809L7.58768 13.0796L12.4986 19.9998Z" fill="black"></path>
+                                  <path opacity="0.6" d="M12.4986 15.051L17.4093 12.1482L12.4986 9.91602V15.051Z" fill="black"></path>
+                                  <path opacity="0.5" d="M7.58768 12.1482L12.4986 15.051V9.91602L7.58768 12.1482Z" fill="black"></path>
+                                </g>
+                                <defs>
+                                  <clippath id="clip0_606_1259">
+                                    <rect width="16" height="16" fill="white" transform="translate(4.5 4)"></rect>
+                                  </clippath>
+                                </defs>
+                              </svg></div>
+                          </div>
+                          <div class="gallery__info-text">0.031</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="gallery__item">
+                    <div class="gallery__item-img"><img src="images/gallery-item-8.png" loading="lazy" alt=""></div>
+                    <div class="gallery__item-info">
+                      <div id="w-node-ea3d133e-c3ed-bf82-8043-5183debb4dd7-9b24b5cc" class="gallery__info-name">
+                        <div class="gallery__info-title--box">
+                          <div class="gallery__info-title">By Confetti</div>
+                          <div class="gallery__info-confirmed">
+                            <div class="w-embed"><svg width="18" height="18" viewbox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8.08184 2.48588C8.39685 1.63299 9.60315 1.63299 9.91816 2.48588C10.1522 3.11948 10.9424 3.33123 11.4619 2.89952C12.1612 2.31841 13.2058 2.92156 13.0522 3.81769C12.9381 4.48341 13.5166 5.06192 14.1823 4.94779C15.0784 4.79416 15.6816 5.83884 15.1005 6.53809C14.6688 7.05756 14.8805 7.84782 15.5141 8.08184C16.367 8.39685 16.367 9.60315 15.5141 9.91816C14.8805 10.1522 14.6688 10.9424 15.1005 11.4619C15.6816 12.1612 15.0784 13.2058 14.1823 13.0522C13.5166 12.9381 12.9381 13.5166 13.0522 14.1823C13.2058 15.0784 12.1612 15.6816 11.4619 15.1005C10.9424 14.6688 10.1522 14.8805 9.91816 15.5141C9.60315 16.367 8.39685 16.367 8.08184 15.5141C7.84782 14.8805 7.05756 14.6688 6.53809 15.1005C5.83884 15.6816 4.79416 15.0784 4.94779 14.1823C5.06192 13.5166 4.48341 12.9381 3.81769 13.0522C2.92156 13.2058 2.31841 12.1612 2.89952 11.4619C3.33123 10.9424 3.11948 10.1522 2.48588 9.91816C1.63299 9.60315 1.63299 8.39685 2.48588 8.08184C3.11948 7.84782 3.33123 7.05756 2.89952 6.53809C2.31841 5.83884 2.92156 4.79416 3.81769 4.94779C4.48341 5.06192 5.06192 4.48341 4.94779 3.81769C4.79416 2.92156 5.83884 2.31841 6.53809 2.89952C7.05756 3.33123 7.84782 3.11948 8.08184 2.48588Z" fill="#3598F2"></path>
+                                <path d="M6 8.47826L8.32 11L12 7" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                              </svg></div>
+                          </div>
+                        </div>
+                        <div id="w-node-ea3d133e-c3ed-bf82-8043-5183debb4ddd-9b24b5cc" class="gallery__info-text">Spring</div>
+                      </div>
+                      <div id="w-node-ea3d133e-c3ed-bf82-8043-5183debb4ddf-9b24b5cc" class="gallery__info-price">
+                        <div class="gallery__info-title--box">
+                          <div class="gallery__info-title">Price</div>
+                        </div>
+                        <div id="w-node-ea3d133e-c3ed-bf82-8043-5183debb4de3-9b24b5cc" class="gallery__info-text--box">
+                          <div class="gallery__info-text--img">
+                            <div class="w-embed"><svg width="25" height="24" viewbox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="0.5" width="24" height="24" rx="12" fill="white"></rect>
+                                <g clip-path="url(#clip0_606_1259)">
+                                  <path opacity="0.75" d="M12.4986 4V15.0512L17.4093 12.1484L12.4986 4Z" fill="black"></path>
+                                  <path opacity="0.4" d="M12.4986 4L7.58768 12.1484L12.4986 15.0512V9.91619V4Z" fill="black"></path>
+                                  <path opacity="0.75" d="M12.4986 15.9809V19.9998L17.4123 13.0796L12.4986 15.9809Z" fill="black"></path>
+                                  <path opacity="0.4" d="M12.4986 19.9998V15.9809L7.58768 13.0796L12.4986 19.9998Z" fill="black"></path>
+                                  <path opacity="0.6" d="M12.4986 15.051L17.4093 12.1482L12.4986 9.91602V15.051Z" fill="black"></path>
+                                  <path opacity="0.5" d="M7.58768 12.1482L12.4986 15.051V9.91602L7.58768 12.1482Z" fill="black"></path>
+                                </g>
+                                <defs>
+                                  <clippath id="clip0_606_1259">
+                                    <rect width="16" height="16" fill="white" transform="translate(4.5 4)"></rect>
+                                  </clippath>
+                                </defs>
+                              </svg></div>
+                          </div>
+                          <div class="gallery__info-text">0.031</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a href="#" class="gallery_btn-mobile w-button">See All NFT</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="roadmap" class="road">
+      <div class="stars"><img src="images/stars.svg" loading="lazy" alt="Stars bg"></div>
+      <div class="stars-mob"><img src="images/stars-mob.svg" loading="lazy" alt="Stars bg"></div>
+      <div class="road__sphere"><img src="images/road-sphere.png" loading="lazy" alt=""></div>
+      <div class="road__star road__star-1"><img src="images/road-star-1.png" loading="lazy" alt=""></div>
+      <div class="road__star road__star-2"><img src="images/road-star-2.png" loading="lazy" alt=""></div>
+      <div class="road__star road__star-3"><img src="images/road-star-3.png" loading="lazy" alt=""></div>
+      <div class="road__star road__star-4"><img src="images/road-star-4.png" loading="lazy" alt=""></div>
+      <div class="road__star road__star-5"><img src="images/road-star-5.png" loading="lazy" alt=""></div>
+      <div class="container-cf">
+        <div class="road__inner">
+          <h2 class="block__title road__title">Roadmap</h2>
+          <div class="map__year-num map__year-num-1 map__year-num-mob">2022</div>
+          <div class="road__map-wripper">
+            <div class="road__map">
+              <div class="road__map-year">
+                <div class="map__year-num">2022</div>
+                <div class="map__year-num map__year-num-2">2023</div>
+              </div>
+              <div class="road__map-items">
+                <div class="road__map-item road__map-item-1"><img src="images/q-item.png" loading="lazy" alt="">
+                  <div class="road__map-item--name">q2</div>
+                </div>
+                <div class="road__map-item road__map-item-2"><img src="images/q-item.png" loading="lazy" alt="">
+                  <div class="road__map-item--name">q3</div>
+                </div>
+                <div class="road__map-item road__map-item-3"><img src="images/q-item.png" loading="lazy" alt="">
+                  <div class="road__map-item--name">q4</div>
+                </div>
+                <div class="road__map-item road__map-item-4"><img src="images/q-item.png" loading="lazy" alt="">
+                  <div class="road__map-item--name">q1</div>
+                </div>
+                <div class="road__map-item road__map-item-5"><img src="images/q-item.png" loading="lazy" alt="">
+                  <div class="road__map-item--name">q2</div>
+                </div>
+              </div>
+              <div class="road__map-nav">
+                <div>
+                  <ul role="list">
+                    <li>Development of the token contract</li>
+                    <li>Development of a staking contract</li>
+                    <li>Start of the Seed funding round</li>
+                    <li>Media attraction</li>
+                    <li>Conducting an IDO</li>
+                  </ul>
+                  <ul role="list">
+                    <li>NFT platform development</li>
+                    <li>End of Seed Round</li>
+                    <li>Exit to pancake</li>
+                    <li>Smart contract audit</li>
+                    <li>P2E game announcement</li>
+                  </ul>
+                  <ul role="list" class="road__ul">
+                    <li>Attracting foreign investors</li>
+                    <li>Development of a coin contract in other blockchain networks</li>
+                    <li>Access to popular exchanges (Binance, OKEX, Huobi, etc.)</li>
+                    <li>Bridge for CNFFTI token</li>
+                    <li>Creation of liquidity pools in new networks</li>
+                  </ul>
+                  <div class="map__year-num map__year-num-2 map__year-num-mob">2023</div>
+                  <ul role="list" class="road__ul-down">
+                    <li>NFT Store Testing</li>
+                    <li>Developing your own swap system on the Binance network</li>
+                    <li>Buying a token with Visa/MasterCard</li>
+                    <li>Token Deployment on SOLANA</li>
+                  </ul>
+                  <ul role="list">
+                    <li>Testing the game on SOLANA</li>
+                    <li>Testing your blockchain system</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="community" class="telegram">
+      <div class="stars"><img src="images/stars.svg" loading="lazy" alt="Stars bg"></div>
+      <div class="stars-mob"><img src="images/stars-mob.svg" loading="lazy" alt="Stars bg"></div>
+      <div class="telegram__sphere"><img src="images/telegram-sphere.png" loading="lazy" sizes="(max-width: 625px) 100vw, 625px" srcset="images/telegram-sphere-p-500.png 500w, images/telegram-sphere.png 625w" alt=""></div>
+      <div class="telegram__gradient">
+        <div class="w-embed"><svg width="1792" height="1612" viewbox="0 0 1792 1612" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g opacity="0.3" filter="url(#filter0_f_606_1051)">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M305.813 766.534C350.42 599.212 601.152 626.936 754.307 546.128C833.126 504.541 888.163 434.846 974.712 413.608C1097.18 383.555 1239.68 324.398 1338.47 402.781C1439.63 483.05 1427.21 637.626 1419.5 766.534C1412.36 885.879 1374.08 997.493 1297.42 1089.24C1211.92 1191.55 1107.6 1287.85 974.713 1298.8C833.212 1310.46 705.172 1235.58 594.073 1147.17C464.606 1044.15 263.193 926.405 305.813 766.534Z" fill="url(#paint0_linear_606_1051)"></path>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M1094.43 1066.27C1069.06 977.144 1142.92 897.303 1151.66 805.05C1163.55 679.601 1073.77 538.878 1153.63 441.41C1243.47 331.775 1418.74 261.052 1545.56 324.341C1670.8 386.836 1651.53 567.992 1681.34 704.745C1697.97 781.03 1700.59 855.419 1677.58 930.028C1656.43 998.616 1607.7 1047.04 1559.4 1100.13C1477.61 1190.03 1425.28 1349.39 1304.07 1340.56C1184.75 1331.87 1127.18 1181.33 1094.43 1066.27Z" fill="url(#paint1_linear_606_1051)"></path>
+            </g>
+            <defs>
+              <filter id="filter0_f_606_1051" x="-6.10352e-05" y="0.481934" width="1994.33" height="1640.43" filterunits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                <feflood flood-opacity="0" result="BackgroundImageFix"></feflood>
+                <feblend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"></feblend>
+                <fegaussianblur stddeviation="150" result="effect1_foregroundBlur_606_1051"></fegaussianblur>
+              </filter>
+              <lineargradient id="paint0_linear_606_1051" x1="1424.38" y1="646.993" x2="482.243" y2="717.954" gradientunits="userSpaceOnUse">
+                <stop stop-color="#4200E1"></stop>
+                <stop offset="1" stop-color="#FF22B6"></stop>
+              </lineargradient>
+              <lineargradient id="paint1_linear_606_1051" x1="1279.17" y1="1197.31" x2="1290.14" y2="483.294" gradientunits="userSpaceOnUse">
+                <stop stop-color="#FF22B6"></stop>
+                <stop offset="1" stop-color="#4200E1"></stop>
+              </lineargradient>
+            </defs>
+          </svg></div>
+      </div>
+      <div class="container-cf">
+        <div class="telegram__inner">
+          <div class="telegram__box">
+            <div class="telegram__box-img">
+              <svg width="128" height="128" viewbox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="128" height="128" rx="64" fill="url(#paint0_linear_606_1234)"></rect>
+                  <path d="M56.6562 86.1875L57.5938 72.125L83.0625 49C83.5833 48.4792 83.6354 48.1667 83.2188 48.0625C82.8021 47.8542 82.1771 47.9583 81.3438 48.375L49.7812 68.375L36.1875 64C34.625 63.5833 33.8958 62.9583 34 62.125C34.1042 61.2917 35.0417 60.4583 36.8125 59.625L90.0938 39.1562C91.3438 38.6354 92.3854 38.7917 93.2188 39.625C94.0521 40.3542 94.2604 41.6562 93.8438 43.5312L84.7812 86.1875C84.0521 89.2083 82.3854 89.9896 79.7812 88.5312L66.0312 78.375L59.3125 84.7812C59 85.1979 58.6354 85.5625 58.2188 85.875C57.8021 86.0833 57.2812 86.1875 56.6562 86.1875Z" fill="white"></path>
+                  <defs>
+                    <lineargradient id="paint0_linear_606_1234" x1="-1.17209e-06" y1="63.0986" x2="128" y2="63.0986" gradientunits="userSpaceOnUse">
+                      <stop stop-color="#4200E1"></stop>
+                      <stop offset="1" stop-color="#FF22B6"></stop>
+                    </lineargradient>
+                  </defs>
+                </svg>
+            </div>
+            <div class="block__title telegram__box-title">
+              <a href="#">Telegram</a>
+              <svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0.6875 17.4375L14.8125 3.3125H6V0.6875H19.3125V14H16.6875V5.1875L2.5625 19.3125L0.6875 17.4375Z" fill="white"></path>
+                </svg>
+            </div>
+            <div class="telegram__box-text">Subscribe to @confetti and get the latest company news and updates,communicate with community users</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="container-cf">
+        <div class="footer__inner">
+          <div class="footer__logo">
+            <a href="#" class="w-inline-block"><img src="images/logo.svg" loading="lazy" alt=""></a>
+          </div>
+          <div class="footer__nav">
+            <div class="footer__nav-menu">
+              <div class="nav__footer">
+                <ul role="list" class="nav__list-footer">
+                  <li class="nav__item-footer">
+                    <a href="#about" class="nav__link">About Us</a>
+                  </li>
+                  <li class="nav__item-footer">
+                    <a href="#opportunities" class="nav__link">Opportunities</a>
+                  </li>
+                  <li class="nav__item-footer">
+                    <a href="#tokenomics" class="nav__link">Tokenomics</a>
+                  </li>
+                  <li class="nav__item-footer">
+                    <a href="#roadmap" class="nav__link">Roadmap</a>
+                  </li>
+                  <li class="nav__item-footer">
+                    <a href="#community" class="nav__link">Community</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="footer__nav-menu">
+              <div class="nav__footer">
+                <ul role="list" class="nav__list-footer">
+                  <li class="nav__item-footer">
+                    <a href="#" class="nav__link">Staking</a>
+                  </li>
+                  <li class="nav__item-footer">
+                    <a href="#" class="nav__link">IDO</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="discover__info-links discover__info-links--1">
+              <div class="discover__info-link discover__info-link--1">
+                <a href="#">CoinGecko</a>
+                <div class="w-embed"><svg width="12" height="11" viewbox="0 0 12 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.761536 9.43323L8.70685 1.48792H3.74982V0.0113525H11.2381V7.49963H9.76154V2.5426L1.81622 10.4879L0.761536 9.43323Z" fill="#FF22B6"></path>
+                  </svg></div>
+              </div>
+              <div class="discover__info-link">
+                <a href="#">CoinMarketCap</a>
+                <div class="w-embed"><svg class="arrow-second" width="12" height="11" viewbox="0 0 12 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.761536 9.43323L8.70685 1.48792H3.74982V0.0113525H11.2381V7.49963H9.76154V2.5426L1.81622 10.4879L0.761536 9.43323Z" fill="#FF22B6"></path>
+                  </svg></div>
+              </div>
+              <div class="copy">
+                <div>Powered by:</div>
+                <a href="https://xmethod.de" target="_blank">xmethod.de</a>
+              </div>
+            </div>
+          </div>
+          <div class="discover__info-links discover__info-links-mob">
+            <div class="discover__info-link discover__info-link--1 discover__info-link-mob">
+              <a href="#">CoinGecko</a>
+              <div class="w-embed"><svg width="12" height="11" viewbox="0 0 12 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0.761536 9.43323L8.70685 1.48792H3.74982V0.0113525H11.2381V7.49963H9.76154V2.5426L1.81622 10.4879L0.761536 9.43323Z" fill="#FF22B6"></path>
+                </svg></div>
+            </div>
+            <div class="discover__info-link discover__info-link-mob">
+              <a href="#">CoinMarketCap</a>
+              <div class="w-embed"><svg class="arrow-second" width="12" height="11" viewbox="0 0 12 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0.761536 9.43323L8.70685 1.48792H3.74982V0.0113525H11.2381V7.49963H9.76154V2.5426L1.81622 10.4879L0.761536 9.43323Z" fill="#FF22B6"></path>
+                </svg></div>
+            </div>
+            <div class="copy">
+              <div>Powered by:</div>
+              <a href="https://xmethod.de" target="_blank">xmethod.de</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+<script src="js/main.js"></script>
+<style>
+.confetti-body {
+overflow-x:hidden;
+}
+.button-gradient {
+	background: radial-gradient(46.68% 168.36% at 63.28% 100%, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(90deg, #4200e1 0%, #ff22b6 100%);
+  box-shadow: 0 6px 0 #5b13a4;
+}
+.button-gradient::before {
+    content: "";
+    background: #ff22b6 100%;
+    position: absolute;
+    width: 100%;
+    width: 0;
+    height: 100%;
+    border-radius: 100px;
+    right: 0;
+    top: 0;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+.button-gradient::after {
+    content: "";
+    background: #ff63ef 100%;
+    position: absolute;
+    width: 100%;
+    width: 0;
+    height: 100%;
+    border-radius: 100px;
+    right: 0;
+    z-index: 0;
+    top: 0;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+.button-gradient:hover::before {
+    width: 100%;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+.button-gradient:focus::after {
+    width: 100%;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+.soon__item-img-1::before {
+    content: "";
+    position: absolute;
+    top: 43px;
+    left: 17px;
+    width:70px;
+    z-index: 10;
+    height: 70px;
+    background: linear-gradient(315deg, #ea453a 0%, #ff827a 100%);
+    opacity: 0.75;
+    filter: blur(40px);
+    border-radius: 20px;
+  }
+.soon__item-img-2::before {
+    content: "";
+    position: absolute;
+    top: 43px;
+    left: 17px;
+    width: 70px;
+    z-index: 10;
+    height: 70px;
+    background: linear-gradient(315deg, #6b970d 0%, #d4ff7a 100%);
+    opacity: 0.75;
+    filter: blur(40px);
+    border-radius: 20px;
+  }
+.soon__item-img-3::before {
+    content: "";
+    position: absolute;
+     top: 43px;
+    left: 17px;
+    width: 70px;
+    z-index: 10;
+    height: 70px;
+    background: linear-gradient(315deg, #1444be 0%, #3598f2 100%);
+    opacity: 0.75;
+    filter: blur(40px);
+    border-radius: 20px;
+  }
+.soon__item-img-4::before {
+    content: "";
+    position: absolute;
+     top: 43px;
+    left: 17px;
+    width: 70px;
+    z-index: 10;
+    height: 70px;
+    background: linear-gradient(315deg, #2e7688 0%, #74def9 100%);
+    opacity: 0.75;
+    filter: blur(40px);
+    border-radius: 20px;
+  }
+.soon__item-img-5::before {
+    content: "";
+    position: absolute;
+     top: 43px;
+    left: 17px;
+    width: 70px;
+    z-index: 10;
+    height: 70px;
+    background: linear-gradient(315deg, #ff658a 0%, #ffd84d 100%);
+    opacity: 0.75;
+    filter: blur(40px);
+    border-radius: 20px;
+  }
+.soon__item-img-6::before {
+    content: "";
+    position: absolute;
+     top: 43px;
+    left: 17px;
+    width: 70px;
+    z-index: 10;
+    height: 70px;
+    background: linear-gradient(315deg, #ff22b6 0%, #ff63ef 100%);
+    opacity: 0.75;
+    filter: blur(40px);
+    border-radius: 20px;
+    
+  }
+  @media(min-width: 700px) {
+      .soon__item-img img {
+	width: 112px;
+}
+    }
+</style>
+</body>
+</html>
